@@ -20,6 +20,7 @@
 		132C7E2728886F1000B83DB9 /* String+AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C7E2628886F1000B83DB9 /* String+AttributedText.swift */; };
 		132C7E292888741100B83DB9 /* String+Character+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C7E282888741100B83DB9 /* String+Character+Comparable.swift */; };
 		132C7E2B2888757A00B83DB9 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132C7E2A2888757A00B83DB9 /* Functions.swift */; };
+		138CBD0F2889BE5500B94341 /* JogoDaForcaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138CBD0E2889BE5500B94341 /* JogoDaForcaTests.swift */; };
 		28F0BBC134735295D7479618 /* Pods_Forca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E8B952DB6C73ED9C8217D8 /* Pods_Forca.framework */; };
 		3D52B83D04245C30473B4358 /* Pods_ForcaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4BEF99112276A9558930C4 /* Pods_ForcaTests.framework */; };
 		8E25472E1DC5B454BFA194FD /* Pods_Forca_ForcaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBAE5B5BC91A7F2D13C730C /* Pods_Forca_ForcaUITests.framework */; };
@@ -61,6 +62,7 @@
 		132C7E2628886F1000B83DB9 /* String+AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AttributedText.swift"; sourceTree = "<group>"; };
 		132C7E282888741100B83DB9 /* String+Character+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Character+Comparable.swift"; sourceTree = "<group>"; };
 		132C7E2A2888757A00B83DB9 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		138CBD0E2889BE5500B94341 /* JogoDaForcaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogoDaForcaTests.swift; sourceTree = "<group>"; };
 		2DBAE5B5BC91A7F2D13C730C /* Pods_Forca_ForcaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Forca_ForcaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		315212D65AC6C4B9FCDDA588 /* Pods-Forca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forca.debug.xcconfig"; path = "Target Support Files/Pods-Forca/Pods-Forca.debug.xcconfig"; sourceTree = "<group>"; };
 		6B4BEF99112276A9558930C4 /* Pods_ForcaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForcaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				132C7E0B288715C100B83DB9 /* ForcaTests.swift */,
+				138CBD0E2889BE5500B94341 /* JogoDaForcaTests.swift */,
 			);
 			path = ForcaTests;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				132C7E0C288715C100B83DB9 /* ForcaTests.swift in Sources */,
+				138CBD0F2889BE5500B94341 /* JogoDaForcaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

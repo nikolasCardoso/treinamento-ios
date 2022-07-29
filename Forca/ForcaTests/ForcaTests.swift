@@ -17,20 +17,25 @@ class ForcaTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_swap() {
+        var mask = "____"
+        let word = "mula"
+        
+        mask = swap(letter: "m", on: mask, original: word)
+        XCTAssertEqual("m___", mask)
+        
+        mask = swap(letter: "u", on: mask, original: word)
+        XCTAssertEqual("mu__", mask)
+        
+        mask = swap(letter: "x", on: mask, original: word)
+        XCTAssertEqual("mu__", mask)
+        
+        mask = swap(letter: "l", on: mask, original: word)
+        XCTAssertEqual("mul_", mask)
+        
+        mask = swap(letter: "a", on: mask, original: word)
+        XCTAssertEqual("mula", mask)
     }
 
 }

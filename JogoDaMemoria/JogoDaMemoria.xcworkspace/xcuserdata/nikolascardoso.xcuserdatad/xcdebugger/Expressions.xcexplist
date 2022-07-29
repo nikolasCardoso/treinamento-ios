@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "JogoDaMemoria.verifyTry(with:):JogoDaMemoria.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lastTry">
+            </PersistentString>
+            <PersistentString
+               value = "currentTry">
+            </PersistentString>
+            <PersistentString
+               value = "lastTryIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.buttonTouched(_:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "jogoDaMemoria.gameSituation">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "JogoDaMemoria.randomizeCards():JogoDaMemoria.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cards">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "JogoDaMemoria.teste():JogoDaMemoria.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "images">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

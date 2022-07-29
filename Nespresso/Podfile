@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Nespresso' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Nespresso
+  pod 'SnapKit', '~> 5.6.0'
+  pod 'R.swift'
+  pod 'Nuke'
+
+  target 'NespressoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'NespressoUITests' do
+    # Pods for testing
+  end
+
+end

@@ -13,7 +13,13 @@ class JogoDaForca {
     
     private(set) var maskedWord: String
     private(set) var lastTry: [String] = []
-    private(set) var erros: Int  = 0
+    private(set) var erros: Int  = 0 {
+        didSet {
+            if erros > 5 {
+                gameSituation = .lose
+            }
+        }
+    }
     private(set) var gameSituation: GameState = .going
     
     init(palavra: String, dica: String){
@@ -35,12 +41,7 @@ class JogoDaForca {
         lastTry.append(comparableLetter)
         guard palavra.contains(comparableLetter) else {
             erros += 1
-            
-            if erros > 5 {
-                gameSituation = .lose
-            }
-            
-            return 
+            return
         }
         
         maskedWord = swap(letter: comparableLetter, on: maskedWord, original: palavra)

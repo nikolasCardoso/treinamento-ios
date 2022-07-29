@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         stackView.axis  = .vertical
         stackView.alignment = .center
         stackView.spacing = 16
-        return  stackView
+        return stackView
     }()
     
     lazy var hintLabel: UILabel = {
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
         
         let image: UIImage?
         
-        if jogoDaForca.gameSituation == GameState.lose {
+        if jogoDaForca.gameSituation == .lose {
             image = UIImage(named: "bonecao_completo_e_mortinho")
         } else {
             image = UIImage(named: "bonecao_fase_\(jogoDaForca.erros)")
@@ -140,9 +140,9 @@ extension ViewController: UITextFieldDelegate {
             jogoDaForca.tryLetter(letter: text)
         }
         
-        if jogoDaForca.gameSituation == GameState.won {
+        if jogoDaForca.gameSituation == .won {
             alert(title: "Voce ganhou")
-        } else if jogoDaForca.gameSituation == GameState.lose {
+        } else if jogoDaForca.gameSituation == .lose {
             alert(title: "Voce perdeu")
         }
         
