@@ -106,34 +106,40 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 13 colors.
+  /// This `R.color` struct is generated, and contains static references to 16 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
-    /// Color `Accessories`.
-    static let accessories = Rswift.ColorResource(bundle: R.hostingBundle, name: "Accessories")
-    /// Color `Coffees`.
-    static let coffees = Rswift.ColorResource(bundle: R.hostingBundle, name: "Coffees")
-    /// Color `Disabled`.
-    static let disabled = Rswift.ColorResource(bundle: R.hostingBundle, name: "Disabled")
-    /// Color `DiscreetText`.
-    static let discreetText = Rswift.ColorResource(bundle: R.hostingBundle, name: "DiscreetText")
-    /// Color `FavoritedFilled`.
-    static let favoritedFilled = Rswift.ColorResource(bundle: R.hostingBundle, name: "FavoritedFilled")
-    /// Color `GreenSeller`.
-    static let greenSeller = Rswift.ColorResource(bundle: R.hostingBundle, name: "GreenSeller")
-    /// Color `GreyBackground`.
-    static let greyBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "GreyBackground")
-    /// Color `IntensityEmpty`.
-    static let intensityEmpty = Rswift.ColorResource(bundle: R.hostingBundle, name: "IntensityEmpty")
-    /// Color `IntensityFilled`.
-    static let intensityFilled = Rswift.ColorResource(bundle: R.hostingBundle, name: "IntensityFilled")
-    /// Color `Machines`.
-    static let machines = Rswift.ColorResource(bundle: R.hostingBundle, name: "Machines")
-    /// Color `Price`.
-    static let price = Rswift.ColorResource(bundle: R.hostingBundle, name: "Price")
-    /// Color `Separator`.
-    static let separator = Rswift.ColorResource(bundle: R.hostingBundle, name: "Separator")
+    /// Color `acessorios`.
+    static let acessorios = Rswift.ColorResource(bundle: R.hostingBundle, name: "acessorios")
+    /// Color `borda-intensidade-preenchida`.
+    static let bordaIntensidadePreenchida = Rswift.ColorResource(bundle: R.hostingBundle, name: "borda-intensidade-preenchida")
+    /// Color `borda-intensidade-vazia`.
+    static let bordaIntensidadeVazia = Rswift.ColorResource(bundle: R.hostingBundle, name: "borda-intensidade-vazia")
+    /// Color `cafes`.
+    static let cafes = Rswift.ColorResource(bundle: R.hostingBundle, name: "cafes")
+    /// Color `cinza-sobreposicao`.
+    static let cinzaSobreposicao = Rswift.ColorResource(bundle: R.hostingBundle, name: "cinza-sobreposicao")
+    /// Color `fundo-cinza`.
+    static let fundoCinza = Rswift.ColorResource(bundle: R.hostingBundle, name: "fundo-cinza")
+    /// Color `intensidade-preenchida`.
+    static let intensidadePreenchida = Rswift.ColorResource(bundle: R.hostingBundle, name: "intensidade-preenchida")
+    /// Color `intensidade-vazia`.
+    static let intensidadeVazia = Rswift.ColorResource(bundle: R.hostingBundle, name: "intensidade-vazia")
+    /// Color `maquinas`.
+    static let maquinas = Rswift.ColorResource(bundle: R.hostingBundle, name: "maquinas")
+    /// Color `preto-sobreposicao`.
+    static let pretoSobreposicao = Rswift.ColorResource(bundle: R.hostingBundle, name: "preto-sobreposicao")
+    /// Color `texto-cinza-discreto`.
+    static let textoCinzaDiscreto = Rswift.ColorResource(bundle: R.hostingBundle, name: "texto-cinza-discreto")
+    /// Color `texto-cinza`.
+    static let textoCinza = Rswift.ColorResource(bundle: R.hostingBundle, name: "texto-cinza")
+    /// Color `verdao-vendedor`.
+    static let verdaoVendedor = Rswift.ColorResource(bundle: R.hostingBundle, name: "verdao-vendedor")
+    /// Color `verde-claro`.
+    static let verdeClaro = Rswift.ColorResource(bundle: R.hostingBundle, name: "verde-claro")
+    /// Color `vermelho-amor`.
+    static let vermelhoAmor = Rswift.ColorResource(bundle: R.hostingBundle, name: "vermelho-amor")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -145,110 +151,137 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "Accessories", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "acessorios", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func accessories(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.accessories, compatibleWith: traitCollection)
+    static func acessorios(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.acessorios, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "Coffees", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "borda-intensidade-preenchida", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func coffees(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.coffees, compatibleWith: traitCollection)
+    static func bordaIntensidadePreenchida(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.bordaIntensidadePreenchida, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "Disabled", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "borda-intensidade-vazia", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func disabled(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.disabled, compatibleWith: traitCollection)
+    static func bordaIntensidadeVazia(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.bordaIntensidadeVazia, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "DiscreetText", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "cafes", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func discreetText(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.discreetText, compatibleWith: traitCollection)
+    static func cafes(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.cafes, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "FavoritedFilled", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "cinza-sobreposicao", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func favoritedFilled(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.favoritedFilled, compatibleWith: traitCollection)
+    static func cinzaSobreposicao(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.cinzaSobreposicao, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "GreenSeller", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "fundo-cinza", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func greenSeller(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.greenSeller, compatibleWith: traitCollection)
+    static func fundoCinza(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.fundoCinza, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "GreyBackground", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "intensidade-preenchida", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func greyBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.greyBackground, compatibleWith: traitCollection)
+    static func intensidadePreenchida(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.intensidadePreenchida, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "IntensityEmpty", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "intensidade-vazia", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func intensityEmpty(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.intensityEmpty, compatibleWith: traitCollection)
+    static func intensidadeVazia(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.intensidadeVazia, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "IntensityFilled", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "maquinas", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func intensityFilled(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.intensityFilled, compatibleWith: traitCollection)
+    static func maquinas(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.maquinas, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "Machines", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "preto-sobreposicao", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func machines(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.machines, compatibleWith: traitCollection)
+    static func pretoSobreposicao(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.pretoSobreposicao, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "Price", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "texto-cinza", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func price(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.price, compatibleWith: traitCollection)
+    static func textoCinza(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.textoCinza, compatibleWith: traitCollection)
     }
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIColor(named: "Separator", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "texto-cinza-discreto", bundle: ..., traitCollection: ...)`
     @available(tvOS 11.0, *)
     @available(iOS 11.0, *)
-    static func separator(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
-      return UIKit.UIColor(resource: R.color.separator, compatibleWith: traitCollection)
+    static func textoCinzaDiscreto(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.textoCinzaDiscreto, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "verdao-vendedor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func verdaoVendedor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.verdaoVendedor, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "verde-claro", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func verdeClaro(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.verdeClaro, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "vermelho-amor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func vermelhoAmor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.vermelhoAmor, compatibleWith: traitCollection)
     }
     #endif
 
@@ -261,98 +294,122 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "Accessories", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "acessorios", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func accessories(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.accessories.name)
+    static func acessorios(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.acessorios.name)
     }
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "Coffees", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "borda-intensidade-preenchida", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func coffees(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.coffees.name)
+    static func bordaIntensidadePreenchida(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.bordaIntensidadePreenchida.name)
     }
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "Disabled", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "borda-intensidade-vazia", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func disabled(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.disabled.name)
+    static func bordaIntensidadeVazia(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.bordaIntensidadeVazia.name)
     }
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "DiscreetText", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "cafes", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func discreetText(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.discreetText.name)
+    static func cafes(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.cafes.name)
     }
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "FavoritedFilled", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "cinza-sobreposicao", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func favoritedFilled(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.favoritedFilled.name)
+    static func cinzaSobreposicao(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.cinzaSobreposicao.name)
     }
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "GreenSeller", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "fundo-cinza", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func greenSeller(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.greenSeller.name)
+    static func fundoCinza(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.fundoCinza.name)
     }
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "GreyBackground", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "intensidade-preenchida", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func greyBackground(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.greyBackground.name)
+    static func intensidadePreenchida(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.intensidadePreenchida.name)
     }
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "IntensityEmpty", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "intensidade-vazia", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func intensityEmpty(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.intensityEmpty.name)
+    static func intensidadeVazia(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.intensidadeVazia.name)
     }
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "IntensityFilled", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "maquinas", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func intensityFilled(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.intensityFilled.name)
+    static func maquinas(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.maquinas.name)
     }
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "Machines", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "preto-sobreposicao", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func machines(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.machines.name)
+    static func pretoSobreposicao(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.pretoSobreposicao.name)
     }
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "Price", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "texto-cinza", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func price(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.price.name)
+    static func textoCinza(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.textoCinza.name)
     }
     #endif
 
     #if os(watchOS)
-    /// `UIColor(named: "Separator", bundle: ..., traitCollection: ...)`
+    /// `UIColor(named: "texto-cinza-discreto", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
-    static func separator(_: Void = ()) -> UIKit.UIColor? {
-      return UIKit.UIColor(named: R.color.separator.name)
+    static func textoCinzaDiscreto(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.textoCinzaDiscreto.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "verdao-vendedor", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func verdaoVendedor(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.verdaoVendedor.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "verde-claro", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func verdeClaro(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.verdeClaro.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "vermelho-amor", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func vermelhoAmor(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.vermelhoAmor.name)
     }
     #endif
 
@@ -534,86 +591,20 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 11 images.
+  /// This `R.image` struct is generated, and contains static references to 6 images.
   struct image {
-    /// Image `AddBag`.
-    static let addBag = Rswift.ImageResource(bundle: R.hostingBundle, name: "AddBag")
-    /// Image `Bag`.
-    static let bag = Rswift.ImageResource(bundle: R.hostingBundle, name: "Bag")
-    /// Image `Capsule`.
-    static let capsule = Rswift.ImageResource(bundle: R.hostingBundle, name: "Capsule")
-    /// Image `CupFilled`.
-    static let cupFilled = Rswift.ImageResource(bundle: R.hostingBundle, name: "CupFilled")
-    /// Image `CupLow`.
-    static let cupLow = Rswift.ImageResource(bundle: R.hostingBundle, name: "CupLow")
-    /// Image `CupMedium`.
-    static let cupMedium = Rswift.ImageResource(bundle: R.hostingBundle, name: "CupMedium")
-    /// Image `Favorite`.
-    static let favorite = Rswift.ImageResource(bundle: R.hostingBundle, name: "Favorite")
-    /// Image `Products`.
-    static let products = Rswift.ImageResource(bundle: R.hostingBundle, name: "Products")
     /// Image `capsulas-inicio`.
     static let capsulasInicio = Rswift.ImageResource(bundle: R.hostingBundle, name: "capsulas-inicio")
+    /// Image `espresso`.
+    static let espresso = Rswift.ImageResource(bundle: R.hostingBundle, name: "espresso")
+    /// Image `lungo`.
+    static let lungo = Rswift.ImageResource(bundle: R.hostingBundle, name: "lungo")
     /// Image `maquina-inicio`.
     static let maquinaInicio = Rswift.ImageResource(bundle: R.hostingBundle, name: "maquina-inicio")
+    /// Image `ristretto`.
+    static let ristretto = Rswift.ImageResource(bundle: R.hostingBundle, name: "ristretto")
     /// Image `xicaras-inicio`.
     static let xicarasInicio = Rswift.ImageResource(bundle: R.hostingBundle, name: "xicaras-inicio")
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "AddBag", bundle: ..., traitCollection: ...)`
-    static func addBag(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.addBag, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "Bag", bundle: ..., traitCollection: ...)`
-    static func bag(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.bag, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "Capsule", bundle: ..., traitCollection: ...)`
-    static func capsule(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.capsule, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "CupFilled", bundle: ..., traitCollection: ...)`
-    static func cupFilled(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.cupFilled, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "CupLow", bundle: ..., traitCollection: ...)`
-    static func cupLow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.cupLow, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "CupMedium", bundle: ..., traitCollection: ...)`
-    static func cupMedium(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.cupMedium, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "Favorite", bundle: ..., traitCollection: ...)`
-    static func favorite(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.favorite, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "Products", bundle: ..., traitCollection: ...)`
-    static func products(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.products, compatibleWith: traitCollection)
-    }
-    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "capsulas-inicio", bundle: ..., traitCollection: ...)`
@@ -623,9 +614,30 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "espresso", bundle: ..., traitCollection: ...)`
+    static func espresso(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.espresso, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "lungo", bundle: ..., traitCollection: ...)`
+    static func lungo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.lungo, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "maquina-inicio", bundle: ..., traitCollection: ...)`
     static func maquinaInicio(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.maquinaInicio, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ristretto", bundle: ..., traitCollection: ...)`
+    static func ristretto(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ristretto, compatibleWith: traitCollection)
     }
     #endif
 
@@ -671,20 +683,37 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 6 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
     struct localizable {
+      /// Value: 10 capsulas, 
+      static let tenCapsules = Rswift.StringResource(key: "tenCapsules", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Acessórios
       static let accessories = Rswift.StringResource(key: "accessories", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Cafés
       static let coffees = Rswift.StringResource(key: "coffees", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Cremosos, espumosos, hmm
       static let coffeesDescription = Rswift.StringResource(key: "coffees.description", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Intensidade: %d
+      static let intensity = Rswift.StringResource(key: "intensity", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Máquinas
       static let machines = Rswift.StringResource(key: "machines", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Pra completar a balaca
       static let accessoriesDescription = Rswift.StringResource(key: "accessories.description", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Sem elas não rola café
       static let machinesDescription = Rswift.StringResource(key: "machines.description", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: 10 capsulas, 
+      static func tenCapsules(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("tenCapsules", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "tenCapsules"
+        }
+
+        return NSLocalizedString("tenCapsules", bundle: bundle, comment: "")
+      }
 
       /// Value: Acessórios
       static func accessories(preferredLanguages: [String]? = nil) -> String {
@@ -723,6 +752,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("coffees.description", bundle: bundle, comment: "")
+      }
+
+      /// Value: Intensidade: %d
+      static func intensity(_ value1: Int, preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          let format = NSLocalizedString("intensity", bundle: hostingBundle, comment: "")
+          return String(format: format, locale: applicationLocale, value1)
+        }
+
+        guard let (locale, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "intensity"
+        }
+
+        let format = NSLocalizedString("intensity", bundle: bundle, comment: "")
+        return String(format: format, locale: locale, value1)
       }
 
       /// Value: Máquinas
