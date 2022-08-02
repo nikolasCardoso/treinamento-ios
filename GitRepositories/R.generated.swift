@@ -105,10 +105,12 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 1 colors.
+  /// This `R.color` struct is generated, and contains static references to 2 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
+    /// Color `baseColor`.
+    static let baseColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "baseColor")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -119,11 +121,70 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "baseColor", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func baseColor(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.baseColor, compatibleWith: traitCollection)
+    }
+    #endif
+
     #if os(watchOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func accentColor(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.accentColor.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "baseColor", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func baseColor(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.baseColor.name)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
+  /// This `R.image` struct is generated, and contains static references to 4 images.
+  struct image {
+    /// Image `javaIcon`.
+    static let javaIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "javaIcon")
+    /// Image `kotlinIcon`.
+    static let kotlinIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "kotlinIcon")
+    /// Image `objCIcon`.
+    static let objCIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "objCIcon")
+    /// Image `swiftIcon`.
+    static let swiftIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "swiftIcon")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "javaIcon", bundle: ..., traitCollection: ...)`
+    static func javaIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.javaIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "kotlinIcon", bundle: ..., traitCollection: ...)`
+    static func kotlinIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.kotlinIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "objCIcon", bundle: ..., traitCollection: ...)`
+    static func objCIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.objCIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "swiftIcon", bundle: ..., traitCollection: ...)`
+    static func swiftIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.swiftIcon, compatibleWith: traitCollection)
     }
     #endif
 
@@ -162,10 +223,25 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 2 localization keys.
     struct localizable {
+      /// Value: Repositories
+      static let repositoriesTitle = Rswift.StringResource(key: "repositories.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Resources
       static let resourcesTitle = Rswift.StringResource(key: "resources.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Repositories
+      static func repositoriesTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("repositories.title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "repositories.title"
+        }
+
+        return NSLocalizedString("repositories.title", bundle: bundle, comment: "")
+      }
 
       /// Value: Resources
       static func resourcesTitle(preferredLanguages: [String]? = nil) -> String {

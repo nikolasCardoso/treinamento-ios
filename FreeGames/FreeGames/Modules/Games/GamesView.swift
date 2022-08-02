@@ -1,6 +1,6 @@
 import UIKit
 
-internal class RepositoriesView: UIView {
+internal class GamesView: UIView {
 
     @available(*, unavailable)
     internal required init?(coder: NSCoder) {
@@ -10,7 +10,7 @@ internal class RepositoriesView: UIView {
 }
 
 // MARK: - Codable View
-extension RepositoriesView {
+extension GamesView {
 
     internal func configViews() {
 

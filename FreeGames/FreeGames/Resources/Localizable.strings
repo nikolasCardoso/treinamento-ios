@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  FreeGames
+
+  Created by Nikolas Cardoso de Oliveira on 02/08/22.
+  
+*/
+
+"games" = "Games";
+"games.title" = "Trending free games";
+
+"playLater" = "Play Later";
+"playLater.playNow.button" = "PLAY NOW";
+"playLater.additionalInfo.title" = "Additional Information";
+"playLater.minSysReq.title" = "Minimum System Requirements";
+"playLater.developer" = "Developer";
+"playLater.publisher" = "Publisher";
+"playLater.platform" = "Platform";
+"playLater.genre" = "Genre";
+"playLater.releaseDate" = "Release Date";
+"playLater.os" = "OS";
+"playLater.processor" = "Processor";
+"playLater.storage" = "Storage";
+"playLater.memory" = "Memory";
+"playLater.graphics" = "Graphics";

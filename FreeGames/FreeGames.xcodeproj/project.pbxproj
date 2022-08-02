@@ -1,0 +1,910 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1359423F28997EC8004526AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359423E28997EC8004526AA /* AppDelegate.swift */; };
+		1359424128997EC8004526AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359424028997EC8004526AA /* SceneDelegate.swift */; };
+		1359424328997EC8004526AA /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359424228997EC8004526AA /* HomeTabBarViewController.swift */; };
+		1359424828997ECB004526AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1359424728997ECB004526AA /* Assets.xcassets */; };
+		1359424B28997ECB004526AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1359424928997ECB004526AA /* LaunchScreen.storyboard */; };
+		1359425628997ECC004526AA /* FreeGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359425528997ECC004526AA /* FreeGamesTests.swift */; };
+		1359426028997ECC004526AA /* FreeGamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359425F28997ECC004526AA /* FreeGamesUITests.swift */; };
+		1359426228997ECC004526AA /* FreeGamesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359426128997ECC004526AA /* FreeGamesUITestsLaunchTests.swift */; };
+		1359427C2899829F004526AA /* GamesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135942762899829F004526AA /* GamesCoordinator.swift */; };
+		1359427D2899829F004526AA /* GamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135942772899829F004526AA /* GamesPresenter.swift */; };
+		1359427E2899829F004526AA /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135942782899829F004526AA /* GamesViewController.swift */; };
+		1359427F2899829F004526AA /* GamesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135942792899829F004526AA /* GamesProtocols.swift */; };
+		135942802899829F004526AA /* GamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359427A2899829F004526AA /* GamesRepository.swift */; };
+		135942812899829F004526AA /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359427B2899829F004526AA /* GamesView.swift */; };
+		13594288289982F2004526AA /* PlayLaterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13594282289982F2004526AA /* PlayLaterCoordinator.swift */; };
+		13594289289982F2004526AA /* PlayLaterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13594283289982F2004526AA /* PlayLaterPresenter.swift */; };
+		1359428A289982F2004526AA /* PlayLaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13594284289982F2004526AA /* PlayLaterViewController.swift */; };
+		1359428B289982F2004526AA /* PlayLaterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13594285289982F2004526AA /* PlayLaterProtocols.swift */; };
+		1359428C289982F2004526AA /* PlayLaterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13594286289982F2004526AA /* PlayLaterRepository.swift */; };
+		1359428D289982F2004526AA /* PlayLaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13594287289982F2004526AA /* PlayLaterView.swift */; };
+		1359428F28998A0B004526AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1359428E28998A0B004526AA /* Localizable.strings */; };
+		1359429128998D78004526AA /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359429028998D78004526AA /* Typealiases.swift */; };
+		1359429628998F17004526AA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359429528998F17004526AA /* R.generated.swift */; };
+		1359429928999A67004526AA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359429828999A67004526AA /* API.swift */; };
+		1359429B28999B80004526AA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359429A28999B80004526AA /* Endpoint.swift */; };
+		1359429D28999D43004526AA /* APISupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359429C28999D43004526AA /* APISupport.swift */; };
+		1359429F2899A2ED004526AA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359429E2899A2ED004526AA /* Game.swift */; };
+		5E0D43EC417F03D80C00A963 /* Pods_FreeGames_FreeGamesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6969EACAC15F73AAD9AA0B57 /* Pods_FreeGames_FreeGamesUITests.framework */; };
+		857D94399A244F143FC91062 /* Pods_FreeGamesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8DA78CB4A79EEAD740B90E /* Pods_FreeGamesTests.framework */; };
+		C065AF7DA6A56FFCCFC500CD /* Pods_FreeGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535C83E243D66ECA243AF801 /* Pods_FreeGames.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1359425228997ECC004526AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1359423328997EC8004526AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1359423A28997EC8004526AA;
+			remoteInfo = FreeGames;
+		};
+		1359425C28997ECC004526AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1359423328997EC8004526AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1359423A28997EC8004526AA;
+			remoteInfo = FreeGames;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1359423B28997EC8004526AA /* FreeGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1359423E28997EC8004526AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1359424028997EC8004526AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1359424228997EC8004526AA /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		1359424728997ECB004526AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1359424A28997ECB004526AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1359424C28997ECB004526AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1359425128997ECC004526AA /* FreeGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1359425528997ECC004526AA /* FreeGamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeGamesTests.swift; sourceTree = "<group>"; };
+		1359425B28997ECC004526AA /* FreeGamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreeGamesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1359425F28997ECC004526AA /* FreeGamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeGamesUITests.swift; sourceTree = "<group>"; };
+		1359426128997ECC004526AA /* FreeGamesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeGamesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		135942762899829F004526AA /* GamesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCoordinator.swift; sourceTree = "<group>"; };
+		135942772899829F004526AA /* GamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesPresenter.swift; sourceTree = "<group>"; };
+		135942782899829F004526AA /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		135942792899829F004526AA /* GamesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesProtocols.swift; sourceTree = "<group>"; };
+		1359427A2899829F004526AA /* GamesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesRepository.swift; sourceTree = "<group>"; };
+		1359427B2899829F004526AA /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		13594282289982F2004526AA /* PlayLaterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterCoordinator.swift; sourceTree = "<group>"; };
+		13594283289982F2004526AA /* PlayLaterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterPresenter.swift; sourceTree = "<group>"; };
+		13594284289982F2004526AA /* PlayLaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterViewController.swift; sourceTree = "<group>"; };
+		13594285289982F2004526AA /* PlayLaterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterProtocols.swift; sourceTree = "<group>"; };
+		13594286289982F2004526AA /* PlayLaterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterRepository.swift; sourceTree = "<group>"; };
+		13594287289982F2004526AA /* PlayLaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterView.swift; sourceTree = "<group>"; };
+		1359428E28998A0B004526AA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		1359429028998D78004526AA /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		1359429528998F17004526AA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		1359429828999A67004526AA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		1359429A28999B80004526AA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		1359429C28999D43004526AA /* APISupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISupport.swift; sourceTree = "<group>"; };
+		1359429E2899A2ED004526AA /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		1E8DA78CB4A79EEAD740B90E /* Pods_FreeGamesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeGamesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39F132748D9BC90802E2CC09 /* Pods-FreeGames-FreeGamesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeGames-FreeGamesUITests.release.xcconfig"; path = "Target Support Files/Pods-FreeGames-FreeGamesUITests/Pods-FreeGames-FreeGamesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		535C83E243D66ECA243AF801 /* Pods_FreeGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5933DC6A0D4BD0D3EEA1B7F8 /* Pods-FreeGames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeGames.release.xcconfig"; path = "Target Support Files/Pods-FreeGames/Pods-FreeGames.release.xcconfig"; sourceTree = "<group>"; };
+		6969EACAC15F73AAD9AA0B57 /* Pods_FreeGames_FreeGamesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeGames_FreeGamesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A72BC9E4E6A2673E5FEC107 /* Pods-FreeGames-FreeGamesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeGames-FreeGamesUITests.debug.xcconfig"; path = "Target Support Files/Pods-FreeGames-FreeGamesUITests/Pods-FreeGames-FreeGamesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F7CF7291FD47ED62DC10C0D /* Pods-FreeGamesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeGamesTests.debug.xcconfig"; path = "Target Support Files/Pods-FreeGamesTests/Pods-FreeGamesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1B6ED1A87597111AB2B823C /* Pods-FreeGamesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeGamesTests.release.xcconfig"; path = "Target Support Files/Pods-FreeGamesTests/Pods-FreeGamesTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1C479B6A90DB8E4D1E843E7 /* Pods-FreeGames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeGames.debug.xcconfig"; path = "Target Support Files/Pods-FreeGames/Pods-FreeGames.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1359423828997EC8004526AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C065AF7DA6A56FFCCFC500CD /* Pods_FreeGames.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1359424E28997ECC004526AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				857D94399A244F143FC91062 /* Pods_FreeGamesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1359425828997ECC004526AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E0D43EC417F03D80C00A963 /* Pods_FreeGames_FreeGamesUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1359423228997EC8004526AA = {
+			isa = PBXGroup;
+			children = (
+				1359423D28997EC8004526AA /* FreeGames */,
+				1359425428997ECC004526AA /* FreeGamesTests */,
+				1359425E28997ECC004526AA /* FreeGamesUITests */,
+				1359423C28997EC8004526AA /* Products */,
+				4CA89D73D9C3741C2E485CF6 /* Pods */,
+				E778DAC3B6B9767ACF99170B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1359423C28997EC8004526AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1359423B28997EC8004526AA /* FreeGames.app */,
+				1359425128997ECC004526AA /* FreeGamesTests.xctest */,
+				1359425B28997ECC004526AA /* FreeGamesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1359423D28997EC8004526AA /* FreeGames */ = {
+			isa = PBXGroup;
+			children = (
+				13594271289981AD004526AA /* API */,
+				13594270289981A4004526AA /* Modules */,
+				1359426F2899819D004526AA /* Models */,
+				13594273289981F7004526AA /* Extensions */,
+				13594272289981BC004526AA /* Resources */,
+				1359426E28998114004526AA /* UnderTheCarpet */,
+				1359424728997ECB004526AA /* Assets.xcassets */,
+				1359424C28997ECB004526AA /* Info.plist */,
+				1359429528998F17004526AA /* R.generated.swift */,
+			);
+			path = FreeGames;
+			sourceTree = "<group>";
+		};
+		1359425428997ECC004526AA /* FreeGamesTests */ = {
+			isa = PBXGroup;
+			children = (
+				1359425528997ECC004526AA /* FreeGamesTests.swift */,
+			);
+			path = FreeGamesTests;
+			sourceTree = "<group>";
+		};
+		1359425E28997ECC004526AA /* FreeGamesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1359425F28997ECC004526AA /* FreeGamesUITests.swift */,
+				1359426128997ECC004526AA /* FreeGamesUITestsLaunchTests.swift */,
+			);
+			path = FreeGamesUITests;
+			sourceTree = "<group>";
+		};
+		1359426E28998114004526AA /* UnderTheCarpet */ = {
+			isa = PBXGroup;
+			children = (
+				1359423E28997EC8004526AA /* AppDelegate.swift */,
+				1359424028997EC8004526AA /* SceneDelegate.swift */,
+				1359424928997ECB004526AA /* LaunchScreen.storyboard */,
+			);
+			path = UnderTheCarpet;
+			sourceTree = "<group>";
+		};
+		1359426F2899819D004526AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1359429E2899A2ED004526AA /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		13594270289981A4004526AA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1359429728998F9F004526AA /* Home */,
+				135942742899822B004526AA /* Games */,
+				135942752899826C004526AA /* PlayLater */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		13594271289981AD004526AA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1359429828999A67004526AA /* API.swift */,
+				1359429A28999B80004526AA /* Endpoint.swift */,
+				1359429C28999D43004526AA /* APISupport.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		13594272289981BC004526AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1359428E28998A0B004526AA /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		13594273289981F7004526AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1359429028998D78004526AA /* Typealiases.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		135942742899822B004526AA /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				135942762899829F004526AA /* GamesCoordinator.swift */,
+				135942772899829F004526AA /* GamesPresenter.swift */,
+				135942782899829F004526AA /* GamesViewController.swift */,
+				135942792899829F004526AA /* GamesProtocols.swift */,
+				1359427A2899829F004526AA /* GamesRepository.swift */,
+				1359427B2899829F004526AA /* GamesView.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		135942752899826C004526AA /* PlayLater */ = {
+			isa = PBXGroup;
+			children = (
+				13594282289982F2004526AA /* PlayLaterCoordinator.swift */,
+				13594283289982F2004526AA /* PlayLaterPresenter.swift */,
+				13594284289982F2004526AA /* PlayLaterViewController.swift */,
+				13594285289982F2004526AA /* PlayLaterProtocols.swift */,
+				13594286289982F2004526AA /* PlayLaterRepository.swift */,
+				13594287289982F2004526AA /* PlayLaterView.swift */,
+			);
+			path = PlayLater;
+			sourceTree = "<group>";
+		};
+		1359429728998F9F004526AA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1359424228997EC8004526AA /* HomeTabBarViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4CA89D73D9C3741C2E485CF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1C479B6A90DB8E4D1E843E7 /* Pods-FreeGames.debug.xcconfig */,
+				5933DC6A0D4BD0D3EEA1B7F8 /* Pods-FreeGames.release.xcconfig */,
+				6A72BC9E4E6A2673E5FEC107 /* Pods-FreeGames-FreeGamesUITests.debug.xcconfig */,
+				39F132748D9BC90802E2CC09 /* Pods-FreeGames-FreeGamesUITests.release.xcconfig */,
+				8F7CF7291FD47ED62DC10C0D /* Pods-FreeGamesTests.debug.xcconfig */,
+				A1B6ED1A87597111AB2B823C /* Pods-FreeGamesTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E778DAC3B6B9767ACF99170B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				535C83E243D66ECA243AF801 /* Pods_FreeGames.framework */,
+				6969EACAC15F73AAD9AA0B57 /* Pods_FreeGames_FreeGamesUITests.framework */,
+				1E8DA78CB4A79EEAD740B90E /* Pods_FreeGamesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1359423A28997EC8004526AA /* FreeGames */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1359426528997ECC004526AA /* Build configuration list for PBXNativeTarget "FreeGames" */;
+			buildPhases = (
+				EE3913607B9C74B88C414D4F /* [CP] Check Pods Manifest.lock */,
+				1359429228998DC2004526AA /* R.swift */,
+				1359423728997EC8004526AA /* Sources */,
+				1359423828997EC8004526AA /* Frameworks */,
+				1359423928997EC8004526AA /* Resources */,
+				E1C3717B1E9683228218FF0A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreeGames;
+			productName = FreeGames;
+			productReference = 1359423B28997EC8004526AA /* FreeGames.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1359425028997ECC004526AA /* FreeGamesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1359426828997ECC004526AA /* Build configuration list for PBXNativeTarget "FreeGamesTests" */;
+			buildPhases = (
+				9BDE04E75E4DE68C70C1E87D /* [CP] Check Pods Manifest.lock */,
+				1359424D28997ECC004526AA /* Sources */,
+				1359424E28997ECC004526AA /* Frameworks */,
+				1359424F28997ECC004526AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1359425328997ECC004526AA /* PBXTargetDependency */,
+			);
+			name = FreeGamesTests;
+			productName = FreeGamesTests;
+			productReference = 1359425128997ECC004526AA /* FreeGamesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1359425A28997ECC004526AA /* FreeGamesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1359426B28997ECC004526AA /* Build configuration list for PBXNativeTarget "FreeGamesUITests" */;
+			buildPhases = (
+				B37527B68E81F982C06C32EE /* [CP] Check Pods Manifest.lock */,
+				1359425728997ECC004526AA /* Sources */,
+				1359425828997ECC004526AA /* Frameworks */,
+				1359425928997ECC004526AA /* Resources */,
+				1308B589B006763B86C294FB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1359425D28997ECC004526AA /* PBXTargetDependency */,
+			);
+			name = FreeGamesUITests;
+			productName = FreeGamesUITests;
+			productReference = 1359425B28997ECC004526AA /* FreeGamesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1359423328997EC8004526AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					1359423A28997EC8004526AA = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					1359425028997ECC004526AA = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 1359423A28997EC8004526AA;
+					};
+					1359425A28997ECC004526AA = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 1359423A28997EC8004526AA;
+					};
+				};
+			};
+			buildConfigurationList = 1359423628997EC8004526AA /* Build configuration list for PBXProject "FreeGames" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1359423228997EC8004526AA;
+			productRefGroup = 1359423C28997EC8004526AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1359423A28997EC8004526AA /* FreeGames */,
+				1359425028997ECC004526AA /* FreeGamesTests */,
+				1359425A28997ECC004526AA /* FreeGamesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1359423928997EC8004526AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1359424B28997ECB004526AA /* LaunchScreen.storyboard in Resources */,
+				1359428F28998A0B004526AA /* Localizable.strings in Resources */,
+				1359424828997ECB004526AA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1359424F28997ECC004526AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1359425928997ECC004526AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1308B589B006763B86C294FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreeGames-FreeGamesUITests/Pods-FreeGames-FreeGamesUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreeGames-FreeGamesUITests/Pods-FreeGames-FreeGamesUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FreeGames-FreeGamesUITests/Pods-FreeGames-FreeGamesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1359429228998DC2004526AA /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		9BDE04E75E4DE68C70C1E87D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreeGamesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B37527B68E81F982C06C32EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreeGames-FreeGamesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1C3717B1E9683228218FF0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreeGames/Pods-FreeGames-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreeGames/Pods-FreeGames-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FreeGames/Pods-FreeGames-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE3913607B9C74B88C414D4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreeGames-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1359423728997EC8004526AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1359429128998D78004526AA /* Typealiases.swift in Sources */,
+				1359428C289982F2004526AA /* PlayLaterRepository.swift in Sources */,
+				135942812899829F004526AA /* GamesView.swift in Sources */,
+				1359424328997EC8004526AA /* HomeTabBarViewController.swift in Sources */,
+				13594289289982F2004526AA /* PlayLaterPresenter.swift in Sources */,
+				1359428B289982F2004526AA /* PlayLaterProtocols.swift in Sources */,
+				1359423F28997EC8004526AA /* AppDelegate.swift in Sources */,
+				1359427C2899829F004526AA /* GamesCoordinator.swift in Sources */,
+				1359429628998F17004526AA /* R.generated.swift in Sources */,
+				1359428D289982F2004526AA /* PlayLaterView.swift in Sources */,
+				1359428A289982F2004526AA /* PlayLaterViewController.swift in Sources */,
+				1359424128997EC8004526AA /* SceneDelegate.swift in Sources */,
+				1359429B28999B80004526AA /* Endpoint.swift in Sources */,
+				1359427E2899829F004526AA /* GamesViewController.swift in Sources */,
+				1359429D28999D43004526AA /* APISupport.swift in Sources */,
+				135942802899829F004526AA /* GamesRepository.swift in Sources */,
+				1359429F2899A2ED004526AA /* Game.swift in Sources */,
+				13594288289982F2004526AA /* PlayLaterCoordinator.swift in Sources */,
+				1359427F2899829F004526AA /* GamesProtocols.swift in Sources */,
+				1359429928999A67004526AA /* API.swift in Sources */,
+				1359427D2899829F004526AA /* GamesPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1359424D28997ECC004526AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1359425628997ECC004526AA /* FreeGamesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1359425728997ECC004526AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1359426228997ECC004526AA /* FreeGamesUITestsLaunchTests.swift in Sources */,
+				1359426028997ECC004526AA /* FreeGamesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1359425328997ECC004526AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1359423A28997EC8004526AA /* FreeGames */;
+			targetProxy = 1359425228997ECC004526AA /* PBXContainerItemProxy */;
+		};
+		1359425D28997ECC004526AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1359423A28997EC8004526AA /* FreeGames */;
+			targetProxy = 1359425C28997ECC004526AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1359424928997ECB004526AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1359424A28997ECB004526AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1359426328997ECC004526AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1359426428997ECC004526AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1359426628997ECC004526AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1C479B6A90DB8E4D1E843E7 /* Pods-FreeGames.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FreeGames/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.cwi.FreeGames;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1359426728997ECC004526AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5933DC6A0D4BD0D3EEA1B7F8 /* Pods-FreeGames.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FreeGames/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.cwi.FreeGames;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1359426928997ECC004526AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F7CF7291FD47ED62DC10C0D /* Pods-FreeGamesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.cwi.FreeGamesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeGames.app/FreeGames";
+			};
+			name = Debug;
+		};
+		1359426A28997ECC004526AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1B6ED1A87597111AB2B823C /* Pods-FreeGamesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.cwi.FreeGamesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeGames.app/FreeGames";
+			};
+			name = Release;
+		};
+		1359426C28997ECC004526AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A72BC9E4E6A2673E5FEC107 /* Pods-FreeGames-FreeGamesUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.cwi.FreeGamesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FreeGames;
+			};
+			name = Debug;
+		};
+		1359426D28997ECC004526AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39F132748D9BC90802E2CC09 /* Pods-FreeGames-FreeGamesUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.cwi.FreeGamesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FreeGames;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1359423628997EC8004526AA /* Build configuration list for PBXProject "FreeGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1359426328997ECC004526AA /* Debug */,
+				1359426428997ECC004526AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1359426528997ECC004526AA /* Build configuration list for PBXNativeTarget "FreeGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1359426628997ECC004526AA /* Debug */,
+				1359426728997ECC004526AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1359426828997ECC004526AA /* Build configuration list for PBXNativeTarget "FreeGamesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1359426928997ECC004526AA /* Debug */,
+				1359426A28997ECC004526AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1359426B28997ECC004526AA /* Build configuration list for PBXNativeTarget "FreeGamesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1359426C28997ECC004526AA /* Debug */,
+				1359426D28997ECC004526AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1359423328997EC8004526AA /* Project object */;
+}

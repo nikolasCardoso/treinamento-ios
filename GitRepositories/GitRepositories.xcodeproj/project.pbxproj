@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13594230289878EE004526AA /* RepositoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359422F289878EE004526AA /* RepositoryData.swift */; };
 		13D0301E28946EC80015AFC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0301D28946EC80015AFC0 /* AppDelegate.swift */; };
 		13D0302028946EC80015AFC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0301F28946EC80015AFC0 /* SceneDelegate.swift */; };
 		13D0302728946ECA0015AFC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13D0302628946ECA0015AFC0 /* Assets.xcassets */; };
@@ -24,7 +25,7 @@
 		13D030632894774C0015AFC0 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0305D2894774C0015AFC0 /* RepositoriesViewController.swift */; };
 		13D030642894774C0015AFC0 /* RepositoriesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0305E2894774C0015AFC0 /* RepositoriesProtocols.swift */; };
 		13D030652894774C0015AFC0 /* RepositoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0305F2894774C0015AFC0 /* RepositoriesRepository.swift */; };
-		13D030662894774C0015AFC0 /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D030602894774C0015AFC0 /* RepositoriesView.swift */; };
+		13D030662894774C0015AFC0 /* RepositoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D030602894774C0015AFC0 /* RepositoriesTableViewCell.swift */; };
 		13D0306A289478E50015AFC0 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D03069289478E50015AFC0 /* HomeTabViewController.swift */; };
 		13D0306E28947DF10015AFC0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0306D28947DF10015AFC0 /* R.generated.swift */; };
 		13D0307128947FFD0015AFC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13D0307028947FFD0015AFC0 /* Localizable.strings */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1359422F289878EE004526AA /* RepositoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryData.swift; sourceTree = "<group>"; };
 		13D0301A28946EC80015AFC0 /* GitRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13D0301D28946EC80015AFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13D0301F28946EC80015AFC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 		13D0305D2894774C0015AFC0 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
 		13D0305E2894774C0015AFC0 /* RepositoriesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesProtocols.swift; sourceTree = "<group>"; };
 		13D0305F2894774C0015AFC0 /* RepositoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesRepository.swift; sourceTree = "<group>"; };
-		13D030602894774C0015AFC0 /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
+		13D030602894774C0015AFC0 /* RepositoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesTableViewCell.swift; sourceTree = "<group>"; };
 		13D03069289478E50015AFC0 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		13D0306D28947DF10015AFC0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		13D0307028947FFD0015AFC0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13594231289884F5004526AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13D030602894774C0015AFC0 /* RepositoriesTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		13D0301128946EC80015AFC0 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +207,7 @@
 			children = (
 				13D03056289476DA0015AFC0 /* User.swift */,
 				13D03058289476E90015AFC0 /* Repository.swift */,
+				1359422F289878EE004526AA /* RepositoryData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,12 +224,12 @@
 		13D030682894777C0015AFC0 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				13594231289884F5004526AA /* Views */,
 				13D0305B2894774C0015AFC0 /* RepositoriesCoordinator.swift */,
 				13D0305C2894774C0015AFC0 /* RepositoriesPresenter.swift */,
 				13D0305D2894774C0015AFC0 /* RepositoriesViewController.swift */,
 				13D0305E2894774C0015AFC0 /* RepositoriesProtocols.swift */,
 				13D0305F2894774C0015AFC0 /* RepositoriesRepository.swift */,
-				13D030602894774C0015AFC0 /* RepositoriesView.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -532,7 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13D03074289480CD0015AFC0 /* Typealiases.swift in Sources */,
-				13D030662894774C0015AFC0 /* RepositoriesView.swift in Sources */,
+				13D030662894774C0015AFC0 /* RepositoriesTableViewCell.swift in Sources */,
 				13D030632894774C0015AFC0 /* RepositoriesViewController.swift in Sources */,
 				13D0306E28947DF10015AFC0 /* R.generated.swift in Sources */,
 				13D030612894774C0015AFC0 /* RepositoriesCoordinator.swift in Sources */,
@@ -540,6 +551,7 @@
 				13D03054289472CB0015AFC0 /* URLProviders.swift in Sources */,
 				13D030622894774C0015AFC0 /* RepositoriesPresenter.swift in Sources */,
 				13D030652894774C0015AFC0 /* RepositoriesRepository.swift in Sources */,
+				13594230289878EE004526AA /* RepositoryData.swift in Sources */,
 				13D03059289476E90015AFC0 /* Repository.swift in Sources */,
 				13D030642894774C0015AFC0 /* RepositoriesProtocols.swift in Sources */,
 				13D03052289472CB0015AFC0 /* APISupport.swift in Sources */,

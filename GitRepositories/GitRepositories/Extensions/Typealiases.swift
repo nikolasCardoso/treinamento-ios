@@ -8,3 +8,4 @@
 import Foundation
 
 typealias Strings = R.string.localizable
+typealias Colors = R.color
