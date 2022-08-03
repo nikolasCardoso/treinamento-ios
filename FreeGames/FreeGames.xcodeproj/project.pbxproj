@@ -34,6 +34,7 @@
 		1359429B28999B80004526AA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359429A28999B80004526AA /* Endpoint.swift */; };
 		1359429D28999D43004526AA /* APISupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359429C28999D43004526AA /* APISupport.swift */; };
 		1359429F2899A2ED004526AA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359429E2899A2ED004526AA /* Game.swift */; };
+		135942A4289B10BF004526AA /* GamesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135942A3289B10BF004526AA /* GamesViewCell.swift */; };
 		5E0D43EC417F03D80C00A963 /* Pods_FreeGames_FreeGamesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6969EACAC15F73AAD9AA0B57 /* Pods_FreeGames_FreeGamesUITests.framework */; };
 		857D94399A244F143FC91062 /* Pods_FreeGamesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E8DA78CB4A79EEAD740B90E /* Pods_FreeGamesTests.framework */; };
 		C065AF7DA6A56FFCCFC500CD /* Pods_FreeGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535C83E243D66ECA243AF801 /* Pods_FreeGames.framework */; };
@@ -88,6 +89,7 @@
 		1359429A28999B80004526AA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1359429C28999D43004526AA /* APISupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISupport.swift; sourceTree = "<group>"; };
 		1359429E2899A2ED004526AA /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		135942A3289B10BF004526AA /* GamesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewCell.swift; sourceTree = "<group>"; };
 		1E8DA78CB4A79EEAD740B90E /* Pods_FreeGamesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeGamesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39F132748D9BC90802E2CC09 /* Pods-FreeGames-FreeGamesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeGames-FreeGamesUITests.release.xcconfig"; path = "Target Support Files/Pods-FreeGames-FreeGamesUITests/Pods-FreeGames-FreeGamesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		535C83E243D66ECA243AF801 /* Pods_FreeGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +241,7 @@
 		135942742899822B004526AA /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				135942A2289B10A6004526AA /* Views */,
 				135942762899829F004526AA /* GamesCoordinator.swift */,
 				135942772899829F004526AA /* GamesPresenter.swift */,
 				135942782899829F004526AA /* GamesViewController.swift */,
@@ -268,6 +271,14 @@
 				1359424228997EC8004526AA /* HomeTabBarViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		135942A2289B10A6004526AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				135942A3289B10BF004526AA /* GamesViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4CA89D73D9C3741C2E485CF6 /* Pods */ = {
@@ -571,6 +582,7 @@
 				135942802899829F004526AA /* GamesRepository.swift in Sources */,
 				1359429F2899A2ED004526AA /* Game.swift in Sources */,
 				13594288289982F2004526AA /* PlayLaterCoordinator.swift in Sources */,
+				135942A4289B10BF004526AA /* GamesViewCell.swift in Sources */,
 				1359427F2899829F004526AA /* GamesProtocols.swift in Sources */,
 				1359429928999A67004526AA /* API.swift in Sources */,
 				1359427D2899829F004526AA /* GamesPresenter.swift in Sources */,

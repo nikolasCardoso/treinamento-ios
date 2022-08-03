@@ -13,6 +13,7 @@ class HomeTabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         viewControllers = [games, playLater]
+        tabBar.backgroundColor = Colors.navigationBar()
     }
     
     var games: UIViewController {

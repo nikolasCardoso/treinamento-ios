@@ -1,6 +1,7 @@
 import Foundation
+import UIKit
 
-internal class GamesPresenter {
+internal class GamesPresenter: NSObject {
 
     internal weak var view: GamesViewProtocol?
     internal var repository: GamesRepositoryInputProtocol
@@ -28,10 +29,7 @@ extension GamesPresenter: GamesRepositoryOutputProtocol {
     
     func getGamesSuccess(with games: [Game]) {
         self.games = games
-        
-        DispatchQueue.main.async {
-            print("foi")
-        }
+        view?.reload()
     }
     
     func getGamesFailure(with error: APIError) {
@@ -40,4 +38,17 @@ extension GamesPresenter: GamesRepositoryOutputProtocol {
         }
     }
     
+}
+
+extension GamesPresenter: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        games.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GamesViewCell.reuseIdentifier, for: indexPath)!
+        cell.setup(with: games[indexPath.row])
+        return cell
+    }
 }

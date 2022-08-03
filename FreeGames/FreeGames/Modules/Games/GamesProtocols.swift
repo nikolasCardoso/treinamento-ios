@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 // Presenter -> Coordinator
 internal protocol GamesCoordinatorProtocol {
@@ -7,11 +8,11 @@ internal protocol GamesCoordinatorProtocol {
 
 // Presenter -> ViewController
 internal protocol GamesViewProtocol: AnyObject {
-
+    func reload()
 }
 
 // ViewController -> Presenter
-internal protocol GamesPresenterProtocol {
+internal protocol GamesPresenterProtocol: UICollectionViewDataSource {
     func viewDidLoad()
 }
 
