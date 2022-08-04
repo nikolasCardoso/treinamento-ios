@@ -14,6 +14,8 @@ class HomeTabBarViewController: UITabBarController {
         
         viewControllers = [games, playLater]
         tabBar.backgroundColor = Colors.navigationBar()
+        tabBar.isTranslucent = false
+        tabBar.unselectedItemTintColor = Colors.background()
     }
     
     var games: UIViewController {

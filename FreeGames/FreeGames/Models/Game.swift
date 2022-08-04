@@ -13,7 +13,7 @@ struct Game: Codable {
     let title: String
     let image: String
     let genre: String
-    let platform: String
+    let platform: Platform
     
     enum CodingKeys: String, CodingKey {
         case id

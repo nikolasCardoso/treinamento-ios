@@ -15,6 +15,21 @@ class GamesViewCell: UICollectionViewCell {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.textColor = .white
+        return label
+    }()
+    
+    lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        return imageView
+    }()
+    
+    
+    lazy var infoLabels: InformationLabel = {
+        let label = InformationLabel()
+        
         return label
     }()
     
@@ -32,6 +47,8 @@ class GamesViewCell: UICollectionViewCell {
     
     func setup(with game: Game) {
         titleLabel.text = game.title
+        infoLabels.setup(with: game.genre, and: game.platform.iconName)
+        imageView.loadImage(from: game.image)
     }
     
 }
@@ -39,15 +56,45 @@ class GamesViewCell: UICollectionViewCell {
 extension GamesViewCell {
     
     func configViews() {
+        contentView.backgroundColor = .white
+        //NÃO FUNFA
+        let gradient = CAGradientLayer()
+        gradient.colors = [
+            UIColor.black.withAlphaComponent(1).cgColor,
+            UIColor.black.withAlphaComponent(0).cgColor,
+        ]
+        gradient.frame = imageView.bounds
+        gradient.startPoint = CGPoint(x: 1, y: 0)
+        gradient.endPoint = CGPoint(x: 1, y: 1)
+        
+        let mask = CALayer()
+        mask.contents = imageView.image?.cgImage
+        mask.frame = gradient.bounds
+        
+        gradient.mask = mask
+        
+        imageView.layer.insertSublayer(gradient, at: 0)
     }
     
     func buildViews() {
+        contentView.addSubview(imageView)
         contentView.addSubview(titleLabel)
+        contentView.addSubview(infoLabels)
     }
     
     func buildConstraints() {
+        imageView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         titleLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(infoLabels.snp.top)
+        }
+        
+        infoLabels.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
     }
     

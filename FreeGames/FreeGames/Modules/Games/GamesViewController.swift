@@ -14,7 +14,7 @@ internal class GamesViewController: UIViewController {
     
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-        collectionView.backgroundColor = .blue
+        collectionView.showsVerticalScrollIndicator = false
         return collectionView
     }()
 
@@ -51,6 +51,7 @@ extension GamesViewController {
     
     func configViews() {
         view.backgroundColor = Colors.background()
+        collectionView.backgroundColor = Colors.background()
         
         collectionView.delegate = self
         collectionView.dataSource = presenter
@@ -65,7 +66,7 @@ extension GamesViewController {
     
     func buildConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(45)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(25)
             make.centerX.equalTo(view.safeAreaLayoutGuide)
         }
         
@@ -73,7 +74,7 @@ extension GamesViewController {
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().inset(16)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
-            make.top.equalTo(titleLabel.snp.bottom).offset(35)
+            make.top.equalTo(titleLabel.snp.bottom).offset(20)
         }
     }
     
@@ -93,7 +94,7 @@ extension GamesViewController: GamesViewProtocol {
 extension GamesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        .init(width: collectionView.frame.width / 2, height: 131)
+        .init(width: (collectionView.frame.width - 8) / 2, height: 131)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -101,6 +102,7 @@ extension GamesViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        6
+        8
     }
+    
 }
