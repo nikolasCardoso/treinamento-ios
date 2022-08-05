@@ -37,4 +37,15 @@ enum Platform: Codable {
             return ""
         }
     }
+    
+    var platform: String {
+        switch self {
+        case .pc:
+            return "Windows"
+        case .webBrowser:
+            return "Web Browser"
+        default:
+            return ""
+        }
+    }
 }

@@ -238,7 +238,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 16 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 17 localization keys.
     struct localizable {
       /// Value: Additional Information
       static let playLaterAdditionalInfoTitle = Rswift.StringResource(key: "playLater.additionalInfo.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -272,6 +272,8 @@ struct R: Rswift.Validatable {
       static let playLaterStorage = Rswift.StringResource(key: "playLater.storage", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Trending free games
       static let gamesTitle = Rswift.StringResource(key: "games.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: https://www.freetogame.com/api
+      static let freeToGameBaseUrl = Rswift.StringResource(key: "freeToGame.baseUrl", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
 
       /// Value: Additional Information
       static func playLaterAdditionalInfoTitle(preferredLanguages: [String]? = nil) -> String {
@@ -479,6 +481,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("games.title", bundle: bundle, comment: "")
+      }
+
+      /// Value: https://www.freetogame.com/api
+      static func freeToGameBaseUrl(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("freeToGame.baseUrl", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "freeToGame.baseUrl"
+        }
+
+        return NSLocalizedString("freeToGame.baseUrl", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

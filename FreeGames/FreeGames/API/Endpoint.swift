@@ -13,10 +13,19 @@ enum Endpoint {
     
     var url: String {
         switch self {
-        case .game(let id):
-            return "\(self)/\(id)"
+        case .game(_):
+            return "game"
         default:
             return "\(self)"
+        }
+    }
+    
+    var gameId: String? {
+        switch self {
+        case .game(let id):
+            return String(id)
+        default:
+            return nil
         }
     }
 }

@@ -53,7 +53,7 @@ extension GamesViewController {
         view.backgroundColor = Colors.background()
         collectionView.backgroundColor = Colors.background()
         
-        collectionView.delegate = self
+        collectionView.delegate = presenter
         collectionView.dataSource = presenter
         collectionView.register(GamesViewCell.self, forCellWithReuseIdentifier: GamesViewCell.reuseIdentifier.identifier)
         
@@ -87,22 +87,6 @@ extension GamesViewController: GamesViewProtocol {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
-    }
-    
-}
-
-extension GamesViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        .init(width: (collectionView.frame.width - 8) / 2, height: 131)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        16
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        8
     }
     
 }

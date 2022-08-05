@@ -12,6 +12,12 @@ internal class GamesCoordinator {
 
 extension GamesCoordinator: GamesCoordinatorProtocol {
     
+    func navigateToGameDetails(with gameId: Int) {
+        let viewController = GameDetailsCoordinator.createModule(navigationController: navigationController, with: gameId)
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 }
 
 extension GamesCoordinator {

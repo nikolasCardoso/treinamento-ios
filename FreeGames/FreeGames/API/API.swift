@@ -12,7 +12,7 @@ import Foundation
 
 class API {
     
-    let baseUrl = "https://www.freetogame.com/api"
+    let baseUrl = Strings.freeToGameBaseUrl()
     
     func request<T: Decodable>(
         endpoint: Endpoint,
@@ -26,6 +26,19 @@ class API {
         }
         
         url.appendPathComponent(endpoint.url)
+        
+        switch endpoint {
+        case .game(_):
+            guard var urlComponents = URLComponents(string: url.absoluteString) else { return }
+            urlComponents.queryItems = [URLQueryItem(name: "id", value: endpoint.gameId)]
+            guard let newUrl = urlComponents.url else {
+                return
+            }
+            url = newUrl
+            break
+        default:
+            break
+        }
         
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue

@@ -3,7 +3,7 @@ import UIKit
 
 // Presenter -> Coordinator
 internal protocol GamesCoordinatorProtocol {
-
+    func navigateToGameDetails(with gameId: Int)
 }
 
 // Presenter -> ViewController
@@ -12,7 +12,7 @@ internal protocol GamesViewProtocol: AnyObject {
 }
 
 // ViewController -> Presenter
-internal protocol GamesPresenterProtocol: UICollectionViewDataSource {
+internal protocol GamesPresenterProtocol: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func viewDidLoad()
 }
 

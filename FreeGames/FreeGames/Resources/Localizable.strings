@@ -6,6 +6,8 @@
   
 */
 
+"freeToGame.baseUrl" = "https://www.freetogame.com/api";
+
 "games" = "Games";
 "games.title" = "Trending free games";
 

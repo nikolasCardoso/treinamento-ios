@@ -51,4 +51,26 @@ extension GamesPresenter: UICollectionViewDataSource {
         cell.setup(with: games[indexPath.row])
         return cell
     }
+    
+}
+
+extension GamesPresenter: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        .init(width: (collectionView.frame.width - 8) / 2, height: 131)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        16
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        8
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let game = games[indexPath.row]
+        
+        coordinator.navigateToGameDetails(with: game.id)
+    }
 }
