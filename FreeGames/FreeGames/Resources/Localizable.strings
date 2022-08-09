@@ -25,3 +25,8 @@
 "playLater.storage" = "Storage";
 "playLater.memory" = "Memory";
 "playLater.graphics" = "Graphics";
+
+"games.icon"= "gamecontroller";
+"playLater.playNow.icon" = "rectangle.portrait.and.arrow.right.fill";
+"playLater.icon"= "clock";
+"playLater.icon.filled"= "clock.fill";

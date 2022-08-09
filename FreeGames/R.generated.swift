@@ -105,7 +105,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 5 colors.
+  /// This `R.color` struct is generated, and contains static references to 6 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
@@ -117,6 +117,8 @@ struct R: Rswift.Validatable {
     static let navigationBar = Rswift.ColorResource(bundle: R.hostingBundle, name: "NavigationBar")
     /// Color `PlayButton`.
     static let playButton = Rswift.ColorResource(bundle: R.hostingBundle, name: "PlayButton")
+    /// Color `SubInformation`.
+    static let subInformation = Rswift.ColorResource(bundle: R.hostingBundle, name: "SubInformation")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -163,6 +165,15 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "SubInformation", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func subInformation(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.subInformation, compatibleWith: traitCollection)
+    }
+    #endif
+
     #if os(watchOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
@@ -203,6 +214,14 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(watchOS)
+    /// `UIColor(named: "SubInformation", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func subInformation(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.subInformation.name)
+    }
+    #endif
+
     fileprivate init() {}
   }
 
@@ -238,7 +257,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 17 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 21 localization keys.
     struct localizable {
       /// Value: Additional Information
       static let playLaterAdditionalInfoTitle = Rswift.StringResource(key: "playLater.additionalInfo.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -272,8 +291,16 @@ struct R: Rswift.Validatable {
       static let playLaterStorage = Rswift.StringResource(key: "playLater.storage", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Trending free games
       static let gamesTitle = Rswift.StringResource(key: "games.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: clock
+      static let playLaterIcon = Rswift.StringResource(key: "playLater.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: clock.fill
+      static let playLaterIconFilled = Rswift.StringResource(key: "playLater.icon.filled", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: gamecontroller
+      static let gamesIcon = Rswift.StringResource(key: "games.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: https://www.freetogame.com/api
       static let freeToGameBaseUrl = Rswift.StringResource(key: "freeToGame.baseUrl", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: rectangle.portrait.and.arrow.right.fill
+      static let playLaterPlayNowIcon = Rswift.StringResource(key: "playLater.playNow.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
 
       /// Value: Additional Information
       static func playLaterAdditionalInfoTitle(preferredLanguages: [String]? = nil) -> String {
@@ -483,6 +510,45 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("games.title", bundle: bundle, comment: "")
       }
 
+      /// Value: clock
+      static func playLaterIcon(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("playLater.icon", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "playLater.icon"
+        }
+
+        return NSLocalizedString("playLater.icon", bundle: bundle, comment: "")
+      }
+
+      /// Value: clock.fill
+      static func playLaterIconFilled(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("playLater.icon.filled", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "playLater.icon.filled"
+        }
+
+        return NSLocalizedString("playLater.icon.filled", bundle: bundle, comment: "")
+      }
+
+      /// Value: gamecontroller
+      static func gamesIcon(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("games.icon", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "games.icon"
+        }
+
+        return NSLocalizedString("games.icon", bundle: bundle, comment: "")
+      }
+
       /// Value: https://www.freetogame.com/api
       static func freeToGameBaseUrl(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -494,6 +560,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("freeToGame.baseUrl", bundle: bundle, comment: "")
+      }
+
+      /// Value: rectangle.portrait.and.arrow.right.fill
+      static func playLaterPlayNowIcon(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("playLater.playNow.icon", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "playLater.playNow.icon"
+        }
+
+        return NSLocalizedString("playLater.playNow.icon", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

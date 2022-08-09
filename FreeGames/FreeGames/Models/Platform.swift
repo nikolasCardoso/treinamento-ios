@@ -38,7 +38,7 @@ enum Platform: Codable {
         }
     }
     
-    var platform: String {
+    var name: String {
         switch self {
         case .pc:
             return "Windows"

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13380A7728A18D97001F353A /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13380A7628A18D97001F353A /* InformationView.swift */; };
 		1359423F28997EC8004526AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359423E28997EC8004526AA /* AppDelegate.swift */; };
 		1359424128997EC8004526AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359424028997EC8004526AA /* SceneDelegate.swift */; };
 		1359424328997EC8004526AA /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359424228997EC8004526AA /* HomeTabBarViewController.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13380A7628A18D97001F353A /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		1359423B28997EC8004526AA /* FreeGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1359423E28997EC8004526AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1359424028997EC8004526AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13380A7528A18CFD001F353A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13380A7628A18D97001F353A /* InformationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		1359423228997EC8004526AA = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +327,7 @@
 		135942AC289D5E3C004526AA /* GameDetails */ = {
 			isa = PBXGroup;
 			children = (
+				13380A7528A18CFD001F353A /* Views */,
 				135942AD289D5E63004526AA /* GameDetailsCoordinator.swift */,
 				135942AE289D5E63004526AA /* GameDetailsPresenter.swift */,
 				135942AF289D5E63004526AA /* GameDetailsViewController.swift */,
@@ -622,6 +633,7 @@
 				1359428B289982F2004526AA /* PlayLaterProtocols.swift in Sources */,
 				1359423F28997EC8004526AA /* AppDelegate.swift in Sources */,
 				1359427C2899829F004526AA /* GamesCoordinator.swift in Sources */,
+				13380A7728A18D97001F353A /* InformationView.swift in Sources */,
 				135942BA289D8853004526AA /* GameDetails.swift in Sources */,
 				135942B7289D5E63004526AA /* GameDetailsRepository.swift in Sources */,
 				1359429628998F17004526AA /* R.generated.swift in Sources */,

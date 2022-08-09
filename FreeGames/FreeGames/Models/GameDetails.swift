@@ -13,6 +13,7 @@ struct GameDetails: Codable {
     let title: String
     let description: String
     let image: String
+    let url: String
     let genre: String
     let platform: Platform
     let developer: String
@@ -20,11 +21,16 @@ struct GameDetails: Codable {
     let releaseDate: String
     let minSysReq: MinimumSystemRequirements?
     
+    var hasSystemRequirements: Bool {
+        minSysReq != nil ? true : false
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id
         case title
         case description = "short_description"
         case image = "thumbnail"
+        case url = "game_url"
         case genre
         case platform
         case developer

@@ -23,7 +23,7 @@ class HomeTabBarViewController: UITabBarController {
         let viewController = GamesCoordinator.createModule(navigationController: navigation)
         
         navigation.viewControllers = [viewController]
-        navigation.tabBarItem = .init(title: Strings.games(), image: UIImage(systemName: "star"), tag: 0)
+        navigation.tabBarItem = .init(title: Strings.games(), image: UIImage(systemName: Strings.gamesIcon()), tag: 0)
         
         return navigation
     }
@@ -33,7 +33,7 @@ class HomeTabBarViewController: UITabBarController {
         let viewController = PlayLaterCoordinator.createModule(navigationController: navigation)
         
         navigation.viewControllers = [viewController]
-        navigation.tabBarItem = .init(title: Strings.playLater(), image: UIImage(systemName: "car"), tag: 1)
+        navigation.tabBarItem = .init(title: Strings.playLater(), image: UIImage(systemName: Strings.playLaterIcon()), tag: 1)
         
         return navigation
     }
