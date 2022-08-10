@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		13380A7728A18D97001F353A /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13380A7628A18D97001F353A /* InformationView.swift */; };
+		13380A7928A40FBD001F353A /* PlayLaterStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13380A7828A40FBD001F353A /* PlayLaterStorage.swift */; };
+		13380A7B28A4207F001F353A /* UIButton+PlayLaterIconChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13380A7A28A4207F001F353A /* UIButton+PlayLaterIconChange.swift */; };
 		1359423F28997EC8004526AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359423E28997EC8004526AA /* AppDelegate.swift */; };
 		1359424128997EC8004526AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359424028997EC8004526AA /* SceneDelegate.swift */; };
 		1359424328997EC8004526AA /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359424228997EC8004526AA /* HomeTabBarViewController.swift */; };
@@ -27,7 +29,7 @@
 		1359428A289982F2004526AA /* PlayLaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13594284289982F2004526AA /* PlayLaterViewController.swift */; };
 		1359428B289982F2004526AA /* PlayLaterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13594285289982F2004526AA /* PlayLaterProtocols.swift */; };
 		1359428C289982F2004526AA /* PlayLaterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13594286289982F2004526AA /* PlayLaterRepository.swift */; };
-		1359428D289982F2004526AA /* PlayLaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13594287289982F2004526AA /* PlayLaterView.swift */; };
+		1359428D289982F2004526AA /* PlayLaterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13594287289982F2004526AA /* PlayLaterViewCell.swift */; };
 		1359428F28998A0B004526AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1359428E28998A0B004526AA /* Localizable.strings */; };
 		1359429128998D78004526AA /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359429028998D78004526AA /* Typealiases.swift */; };
 		1359429628998F17004526AA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1359429528998F17004526AA /* R.generated.swift */; };
@@ -70,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		13380A7628A18D97001F353A /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		13380A7828A40FBD001F353A /* PlayLaterStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterStorage.swift; sourceTree = "<group>"; };
+		13380A7A28A4207F001F353A /* UIButton+PlayLaterIconChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+PlayLaterIconChange.swift"; sourceTree = "<group>"; };
 		1359423B28997EC8004526AA /* FreeGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1359423E28997EC8004526AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1359424028997EC8004526AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +97,7 @@
 		13594284289982F2004526AA /* PlayLaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterViewController.swift; sourceTree = "<group>"; };
 		13594285289982F2004526AA /* PlayLaterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterProtocols.swift; sourceTree = "<group>"; };
 		13594286289982F2004526AA /* PlayLaterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterRepository.swift; sourceTree = "<group>"; };
-		13594287289982F2004526AA /* PlayLaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterView.swift; sourceTree = "<group>"; };
+		13594287289982F2004526AA /* PlayLaterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLaterViewCell.swift; sourceTree = "<group>"; };
 		1359428E28998A0B004526AA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		1359429028998D78004526AA /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		1359429528998F17004526AA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -155,6 +159,14 @@
 			isa = PBXGroup;
 			children = (
 				13380A7628A18D97001F353A /* InformationView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13380A7C28A42C96001F353A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13594287289982F2004526AA /* PlayLaterViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,6 +281,7 @@
 			children = (
 				1359429028998D78004526AA /* Typealiases.swift */,
 				135942AA289C4DC2004526AA /* UIImageView+LoadImage.swift */,
+				13380A7A28A4207F001F353A /* UIButton+PlayLaterIconChange.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,12 +303,13 @@
 		135942752899826C004526AA /* PlayLater */ = {
 			isa = PBXGroup;
 			children = (
+				13380A7C28A42C96001F353A /* Views */,
 				13594282289982F2004526AA /* PlayLaterCoordinator.swift */,
 				13594283289982F2004526AA /* PlayLaterPresenter.swift */,
 				13594284289982F2004526AA /* PlayLaterViewController.swift */,
 				13594285289982F2004526AA /* PlayLaterProtocols.swift */,
 				13594286289982F2004526AA /* PlayLaterRepository.swift */,
-				13594287289982F2004526AA /* PlayLaterView.swift */,
+				13380A7828A40FBD001F353A /* PlayLaterStorage.swift */,
 			);
 			path = PlayLater;
 			sourceTree = "<group>";
@@ -639,8 +653,9 @@
 				1359429628998F17004526AA /* R.generated.swift in Sources */,
 				135942A6289C08F2004526AA /* Platform.swift in Sources */,
 				135942B3289D5E63004526AA /* GameDetailsCoordinator.swift in Sources */,
-				1359428D289982F2004526AA /* PlayLaterView.swift in Sources */,
+				1359428D289982F2004526AA /* PlayLaterViewCell.swift in Sources */,
 				1359428A289982F2004526AA /* PlayLaterViewController.swift in Sources */,
+				13380A7B28A4207F001F353A /* UIButton+PlayLaterIconChange.swift in Sources */,
 				1359424128997EC8004526AA /* SceneDelegate.swift in Sources */,
 				1359429B28999B80004526AA /* Endpoint.swift in Sources */,
 				1359427E2899829F004526AA /* GamesViewController.swift in Sources */,
@@ -653,6 +668,7 @@
 				1359427F2899829F004526AA /* GamesProtocols.swift in Sources */,
 				135942B8289D5E63004526AA /* GameDetailsView.swift in Sources */,
 				1359429928999A67004526AA /* API.swift in Sources */,
+				13380A7928A40FBD001F353A /* PlayLaterStorage.swift in Sources */,
 				1359427D2899829F004526AA /* GamesPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

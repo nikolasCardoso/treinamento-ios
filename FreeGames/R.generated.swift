@@ -257,7 +257,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 21 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 22 localization keys.
     struct localizable {
       /// Value: Additional Information
       static let playLaterAdditionalInfoTitle = Rswift.StringResource(key: "playLater.additionalInfo.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -299,6 +299,8 @@ struct R: Rswift.Validatable {
       static let gamesIcon = Rswift.StringResource(key: "games.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: https://www.freetogame.com/api
       static let freeToGameBaseUrl = Rswift.StringResource(key: "freeToGame.baseUrl", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: minus.circle.fill
+      static let playLaterRemoveIcon = Rswift.StringResource(key: "playLater.remove.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: rectangle.portrait.and.arrow.right.fill
       static let playLaterPlayNowIcon = Rswift.StringResource(key: "playLater.playNow.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
 
@@ -560,6 +562,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("freeToGame.baseUrl", bundle: bundle, comment: "")
+      }
+
+      /// Value: minus.circle.fill
+      static func playLaterRemoveIcon(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("playLater.remove.icon", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "playLater.remove.icon"
+        }
+
+        return NSLocalizedString("playLater.remove.icon", bundle: bundle, comment: "")
       }
 
       /// Value: rectangle.portrait.and.arrow.right.fill

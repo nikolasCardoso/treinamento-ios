@@ -30,3 +30,4 @@
 "playLater.playNow.icon" = "rectangle.portrait.and.arrow.right.fill";
 "playLater.icon"= "clock";
 "playLater.icon.filled"= "clock.fill";
+"playLater.remove.icon" = "minus.circle.fill";

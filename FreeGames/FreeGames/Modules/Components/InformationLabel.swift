@@ -65,7 +65,7 @@ extension InformationLabel {
     func buildConstraints() {
         stackView.snp.makeConstraints { make in
             make.bottom.equalToSuperview().inset(5)
-            make.center.equalToSuperview()
+            make.top.equalToSuperview()
         }
         
         imageView.snp.makeConstraints { make in

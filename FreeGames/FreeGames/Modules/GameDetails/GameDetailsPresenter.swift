@@ -8,6 +8,7 @@ internal class GameDetailsPresenter {
     
     internal var gameId: Int
     internal var game: GameDetails?
+    internal var isGameInPlayLater: Bool = false
     
     internal init(repository: GameDetailsRepositoryInputProtocol,
                   gameId: Int,
@@ -20,6 +21,17 @@ internal class GameDetailsPresenter {
 
 // MARK: - Presenter Protocol
 extension GameDetailsPresenter: GameDetailsPresenterProtocol {
+    
+    func viewWillAppear() {
+        view?.changePlayLaterButton(isInPlayLater: PlayLaterStorage.shared.isInPlayLater(id: gameId))
+    }
+    
+    func addGameToPlayLater() {
+        if let gameNotNull = game {
+            let isInPlayLater = PlayLaterStorage.shared.setPlayLater(game: gameNotNull)
+            view?.changePlayLaterButton(isInPlayLater: isInPlayLater)
+        }
+    }
     
     func viewDidLoad() {
         repository.getGameDetails(with: gameId)

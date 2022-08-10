@@ -8,5 +8,10 @@ internal class PlayLaterRepository {
 
 // MARK: - Repository Input
 extension PlayLaterRepository: PlayLaterRepositoryInputProtocol {
+    
+    func getPlayLaterGames() {
+        let games = PlayLaterStorage.shared.games
+        output?.getPlayLaterGamesSuccess(with: games)
+    }
 
 }

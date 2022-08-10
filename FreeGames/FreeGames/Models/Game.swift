@@ -11,6 +11,7 @@ struct Game: Codable {
     
     let id: Int
     let title: String
+    let description: String
     let image: String
     let genre: String
     let platform: Platform
@@ -18,6 +19,7 @@ struct Game: Codable {
     enum CodingKeys: String, CodingKey {
         case id
         case title
+        case description = "short_description"
         case image = "thumbnail"
         case genre
         case platform

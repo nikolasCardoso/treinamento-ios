@@ -10,6 +10,8 @@ import UIKit
 
 class InformationView: UIView {
     
+    private let emptyInformation: String = "?"
+    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Colors.subInformation()
@@ -45,9 +47,13 @@ class InformationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(with title: String, and information: String) {
+    func setup(with title: String, and information: String?) {
         titleLabel.text = title
-        informationLabel.text = information
+        if information != nil {
+            informationLabel.text = information
+        } else {
+            informationLabel.text = emptyInformation
+        }
     }
     
 }

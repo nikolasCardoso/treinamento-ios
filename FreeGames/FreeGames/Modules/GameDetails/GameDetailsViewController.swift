@@ -46,6 +46,7 @@ internal class GameDetailsViewController: UIViewController {
         let button = UIButton(configuration: buttonConfig)
         button.tintColor = .white
         button.backgroundColor = Colors.navigationBar()
+        button.addTarget(self, action: #selector(setPlayLater), for: .touchDown)
         return button
     }()
     
@@ -208,6 +209,7 @@ internal class GameDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        presenter.viewWillAppear()
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
@@ -218,7 +220,11 @@ internal class GameDetailsViewController: UIViewController {
             UIApplication.shared.open(url)
         }
     }
-
+    
+    @objc private func setPlayLater() {
+        presenter.addGameToPlayLater()
+    }
+    
 }
 
 // MARK: - Views configuration
@@ -363,6 +369,10 @@ extension GameDetailsViewController {
 // MARK: - GameDetailsViewControllerProtocol
 extension GameDetailsViewController: GameDetailsViewProtocol {
     
+    func changePlayLaterButton(isInPlayLater: Bool) {
+        playLaterButton.changePlayLaterIcon(when: isInPlayLater)
+    }
+    
     func setup(with game: GameDetails) {
         gameUrl = game.url
         title = game.title
@@ -379,17 +389,12 @@ extension GameDetailsViewController: GameDetailsViewProtocol {
             minSysReqView.isHidden = false
             
             guard let newGame = game.minSysReq else { return }
-            guard let os = newGame.os else { return }
-            guard let processor = newGame.processor else { return }
-            guard let graphics = newGame.graphics else { return }
-            guard let storage = newGame.storage else { return }
-            guard let memory = newGame.memory else { return }
             
-            osView.setup(with: Strings.playLaterOs(), and: os)
-            processorView.setup(with: Strings.playLaterProcessor(), and: processor)
-            graphicsView.setup(with: Strings.playLaterGraphics(), and: graphics)
-            storageView.setup(with: Strings.playLaterStorage(), and: storage)
-            memoryView.setup(with: Strings.playLaterMemory(), and: memory)
+            osView.setup(with: Strings.playLaterOs(), and: newGame.os)
+            processorView.setup(with: Strings.playLaterProcessor(), and: newGame.processor)
+            graphicsView.setup(with: Strings.playLaterGraphics(), and: newGame.graphics)
+            storageView.setup(with: Strings.playLaterStorage(), and: newGame.storage)
+            memoryView.setup(with: Strings.playLaterMemory(), and: newGame.memory)
         }
     }
 
