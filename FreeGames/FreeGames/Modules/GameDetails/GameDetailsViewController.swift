@@ -1,7 +1,9 @@
 import UIKit
 
-internal class GameDetailsViewController: UIViewController {
-
+internal class GameDetailsViewController: UIViewController, LoadingIIndicatorViewType {
+    
+    var loadingIndicatorViewController: LoadingIndicatorViewController?
+    
     private let presenter: GameDetailsPresenterProtocol
     
     private var gameUrl: String?

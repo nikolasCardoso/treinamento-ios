@@ -8,7 +8,10 @@ internal protocol GameDetailsCoordinatorProtocol {
 // Presenter -> ViewController
 internal protocol GameDetailsViewProtocol: AnyObject {
     func setup(with game: GameDetails)
+    func showAlert(title: String, message: String)
     func changePlayLaterButton(isInPlayLater: Bool)
+    func showLoadingIndicator()
+    func hideLoadingIndicator()
 }
 
 // ViewController -> Presenter

@@ -8,6 +8,7 @@
 import Foundation
 
 enum Platform: Codable {
+    
     case pc
     case webBrowser
     case unknown
@@ -48,4 +49,5 @@ enum Platform: Codable {
             return ""
         }
     }
+    
 }

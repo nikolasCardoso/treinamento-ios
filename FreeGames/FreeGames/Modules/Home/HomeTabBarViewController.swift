@@ -12,10 +12,16 @@ class HomeTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewControllers = [games, playLater]
-        tabBar.backgroundColor = Colors.navigationBar()
-        tabBar.isTranslucent = false
-        tabBar.unselectedItemTintColor = Colors.background()
+        let barAppearance = UIBarAppearance()
+        barAppearance.backgroundColor = Colors.navigationBar()
+        
+        let appearence = UITabBarAppearance(barAppearance: barAppearance)
+        
+        tabBar.standardAppearance = appearence
+        tabBar.scrollEdgeAppearance = appearence
+        tabBar.tintColor = .white
+        
+        viewControllers = [games, playLater, profile]
     }
     
     var games: UIViewController {
@@ -37,5 +43,16 @@ class HomeTabBarViewController: UITabBarController {
         
         return navigation
     }
+    
+    var profile: UIViewController {
+        let navigation = UINavigationController()
+        let viewController = ProfileCoordinator.createModule(navigationController: navigation)
+        
+        navigation.viewControllers = [viewController]
+        navigation.tabBarItem = .init(title: Strings.profile(), image: UIImage(systemName: Strings.profileIcon()), tag: 2)
+        
+        return navigation
+    }
+    
 }
 

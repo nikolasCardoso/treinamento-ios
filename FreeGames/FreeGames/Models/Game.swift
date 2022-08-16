@@ -24,4 +24,5 @@ struct Game: Codable {
         case genre
         case platform
     }
+    
 }

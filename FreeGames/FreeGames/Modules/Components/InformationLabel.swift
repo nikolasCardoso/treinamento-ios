@@ -16,14 +16,25 @@ class InformationLabel: UIView {
         return stackView
     }()
     
-    private lazy var textLabel: UILabel = {
+    private lazy var boxGenre: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    private lazy var boxPlatform: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    private lazy var genreLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 10)
         return label
     }()
     
-    private lazy var imageView: UIImageView = {
+    private lazy var platformImageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.tintColor = .black
         return imageView
     }()
     
@@ -40,36 +51,53 @@ class InformationLabel: UIView {
     }
     
     func setup(with genre: String, and platform: String) {
-        textLabel.text = genre
-        imageView.image = UIImage(systemName: platform)
+        genreLabel.text = genre
+        platformImageView.image = UIImage(systemName: platform)
     }
-    
     
 }
 
 extension InformationLabel {
     
     func setupViews() {
-        textLabel.backgroundColor = Colors.labelBackground()
-        imageView.backgroundColor = Colors.labelBackground()
-        imageView.tintColor = .black
+        boxGenre.backgroundColor = Colors.labelBackground()
+        boxPlatform.backgroundColor = Colors.labelBackground()
     }
     
     func buildViews() {
         addSubview(stackView)
         
-        stackView.addArrangedSubview(textLabel)
-        stackView.addArrangedSubview(imageView)
+        stackView.addArrangedSubview(boxGenre)
+        stackView.addArrangedSubview(boxPlatform)
+        
+        boxGenre.addSubview(genreLabel)
+        boxPlatform.addSubview(platformImageView)
     }
     
     func buildConstraints() {
         stackView.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().inset(5)
-            make.top.equalToSuperview()
+            make.edges.equalToSuperview()
         }
         
-        imageView.snp.makeConstraints { make in
-            make.size.equalTo(16)
+        boxGenre.snp.makeConstraints { make in
+            make.height.equalTo(16)
+        }
+        boxPlatform.snp.makeConstraints { make in
+            make.height.equalTo(16)
+        }
+        
+        genreLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(3)
+            make.trailing.equalToSuperview().inset(3)
+            make.top.bottom.equalToSuperview()
+        }
+        
+        platformImageView.snp.makeConstraints { make in
+            make.width.equalTo(16)
+            make.leading.equalToSuperview().offset(3)
+            make.trailing.equalToSuperview().inset(3)
+            make.top.equalToSuperview().offset(1)
+            make.bottom.equalToSuperview().inset(1)
         }
     }
     

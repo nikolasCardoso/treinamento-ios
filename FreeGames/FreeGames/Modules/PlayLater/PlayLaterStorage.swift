@@ -15,13 +15,13 @@ class PlayLaterStorage {
     
     private let databaseKey = "FreeGamesPlayLater"
     
-    var games: [GameDetails] = []
+    var games: [GamePlayLater] = []
     
     private init() {
         fetchFromDatabase()
     }
     
-    func setPlayLater(game: GameDetails) -> Bool {
+    func setPlayLater(game: GamePlayLater) -> Bool {
         defer {
             updateDatabase()
         }
@@ -41,7 +41,7 @@ class PlayLaterStorage {
         }
     }
     
-    func remove(game: GameDetails) {
+    func remove(game: GamePlayLater) {
         if let indexOfGame = games.firstIndex(where: { $0.id == game.id }) {
             games.remove(at: indexOfGame)
         }
@@ -60,7 +60,7 @@ private extension PlayLaterStorage {
     
     func fetchFromDatabase() {
         guard let jsonData = userDefaults.data(forKey: databaseKey),
-              let data = try? JSONDecoder().decode([GameDetails].self, from: jsonData)
+              let data = try? JSONDecoder().decode([GamePlayLater].self, from: jsonData)
         else { return }
         
         self.games = data

@@ -3,10 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "PlayLaterStorage.updateDatabase():PlayLaterStorage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userDefaults.data(forKey: databaseKey)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "API.request&lt;&#x3c4;_0_0&gt;(endpoint:method:success:failure:):API.swift">
          <PersistentStrings>
             <PersistentString
                value = "urlComponents.url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PlayLaterStorage.().init():PlayLaterStorage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "games">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

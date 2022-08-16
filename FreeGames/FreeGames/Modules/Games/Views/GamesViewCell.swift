@@ -21,6 +21,11 @@ class GamesViewCell: UICollectionViewCell {
         return label
     }()
     
+    lazy var gradientLayerView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         return imageView
@@ -57,23 +62,7 @@ extension GamesViewCell {
     
     func configViews() {
         contentView.backgroundColor = .white
-        //NÃO FUNFA
-        let gradient = CAGradientLayer()
-        gradient.colors = [
-            UIColor.black.withAlphaComponent(1).cgColor,
-            UIColor.black.withAlphaComponent(0).cgColor,
-        ]
-        gradient.frame = imageView.bounds
-        gradient.startPoint = CGPoint(x: 1, y: 0)
-        gradient.endPoint = CGPoint(x: 1, y: 1)
-        
-        let mask = CALayer()
-        mask.contents = imageView.image?.cgImage
-        mask.frame = gradient.bounds
-        
-        gradient.mask = mask
-        
-        imageView.layer.insertSublayer(gradient, at: 0)
+        imageView.addBlackGradientLayer(frame: contentView.bounds)
     }
     
     func buildViews() {
@@ -89,12 +78,12 @@ extension GamesViewCell {
         
         titleLabel.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(infoLabels.snp.top)
         }
         
         infoLabels.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.top.equalTo(titleLabel.snp.bottom).offset(6)
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(5)
         }
     }
     

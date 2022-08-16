@@ -59,7 +59,6 @@ class API {
             do {
                 let decodedData = try decoder.decode(T.self, from: data)
                 success(decodedData)
-                print(decodedData)
             } catch {
                 failure(.decodeFailed(
                     error: error,
@@ -68,4 +67,5 @@ class API {
             }
         }.resume()
     }
+    
 }

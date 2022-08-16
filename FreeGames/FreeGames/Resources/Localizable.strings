@@ -26,8 +26,21 @@
 "playLater.memory" = "Memory";
 "playLater.graphics" = "Graphics";
 
+"profile" = "Profile";
+"profile.edit" = "Edit profile";
+"profile.username.default" = "Guest";
+"profile.email.default" = "guest@email.com";
+"profile.save" = "Save profile";
+"profile.name.label" = "Name";
+"profile.email.label" = "Email";
+"profile.changePhoto" = "Change profile photo";
+
 "games.icon"= "gamecontroller";
 "playLater.playNow.icon" = "rectangle.portrait.and.arrow.right.fill";
 "playLater.icon"= "clock";
 "playLater.icon.filled"= "clock.fill";
 "playLater.remove.icon" = "minus.circle.fill";
+"profile.icon" = "person";
+
+"error.title" = "Oopss!";
+"error.message" = "Something went wrong, please try again later";

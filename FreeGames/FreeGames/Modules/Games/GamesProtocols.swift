@@ -9,6 +9,9 @@ internal protocol GamesCoordinatorProtocol {
 // Presenter -> ViewController
 internal protocol GamesViewProtocol: AnyObject {
     func reload()
+    func showAlert(title: String, message: String)
+    func showLoadingIndicator()
+    func hideLoadingIndicator()
 }
 
 // ViewController -> Presenter

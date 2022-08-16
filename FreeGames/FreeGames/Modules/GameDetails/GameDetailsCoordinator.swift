@@ -1,16 +1,12 @@
 import UIKit
 
-internal class GameDetailsCoordinator {
+internal class GameDetailsCoordinator: GameDetailsCoordinatorProtocol {
     
     weak private(set) internal var navigationController: UINavigationController?
     
     internal init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
     }
-    
-}
-
-extension GameDetailsCoordinator: GameDetailsCoordinatorProtocol {
     
 }
 

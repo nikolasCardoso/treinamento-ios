@@ -105,7 +105,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 6 colors.
+  /// This `R.color` struct is generated, and contains static references to 8 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
@@ -113,6 +113,10 @@ struct R: Rswift.Validatable {
     static let background = Rswift.ColorResource(bundle: R.hostingBundle, name: "Background")
     /// Color `LabelBackground`.
     static let labelBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "LabelBackground")
+    /// Color `LightBlue`.
+    static let lightBlue = Rswift.ColorResource(bundle: R.hostingBundle, name: "LightBlue")
+    /// Color `LightGrey`.
+    static let lightGrey = Rswift.ColorResource(bundle: R.hostingBundle, name: "LightGrey")
     /// Color `NavigationBar`.
     static let navigationBar = Rswift.ColorResource(bundle: R.hostingBundle, name: "NavigationBar")
     /// Color `PlayButton`.
@@ -144,6 +148,24 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func labelBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.labelBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "LightBlue", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func lightBlue(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.lightBlue, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "LightGrey", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func lightGrey(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.lightGrey, compatibleWith: traitCollection)
     }
     #endif
 
@@ -195,6 +217,22 @@ struct R: Rswift.Validatable {
     @available(watchOSApplicationExtension 4.0, *)
     static func labelBackground(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.labelBackground.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "LightBlue", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func lightBlue(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.lightBlue.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "LightGrey", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func lightGrey(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.lightGrey.name)
     }
     #endif
 
@@ -257,24 +295,36 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 22 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 33 localization keys.
     struct localizable {
       /// Value: Additional Information
       static let playLaterAdditionalInfoTitle = Rswift.StringResource(key: "playLater.additionalInfo.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Change profile photo
+      static let profileChangePhoto = Rswift.StringResource(key: "profile.changePhoto", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Developer
       static let playLaterDeveloper = Rswift.StringResource(key: "playLater.developer", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Edit profile
+      static let profileEdit = Rswift.StringResource(key: "profile.edit", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Email
+      static let profileEmailLabel = Rswift.StringResource(key: "profile.email.label", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Games
       static let games = Rswift.StringResource(key: "games", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Genre
       static let playLaterGenre = Rswift.StringResource(key: "playLater.genre", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Graphics
       static let playLaterGraphics = Rswift.StringResource(key: "playLater.graphics", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Guest
+      static let profileUsernameDefault = Rswift.StringResource(key: "profile.username.default", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Memory
       static let playLaterMemory = Rswift.StringResource(key: "playLater.memory", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Minimum System Requirements
       static let playLaterMinSysReqTitle = Rswift.StringResource(key: "playLater.minSysReq.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Name
+      static let profileNameLabel = Rswift.StringResource(key: "profile.name.label", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: OS
       static let playLaterOs = Rswift.StringResource(key: "playLater.os", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Oopss!
+      static let errorTitle = Rswift.StringResource(key: "error.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: PLAY NOW
       static let playLaterPlayNowButton = Rswift.StringResource(key: "playLater.playNow.button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Platform
@@ -283,10 +333,16 @@ struct R: Rswift.Validatable {
       static let playLater = Rswift.StringResource(key: "playLater", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Processor
       static let playLaterProcessor = Rswift.StringResource(key: "playLater.processor", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Profile
+      static let profile = Rswift.StringResource(key: "profile", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Publisher
       static let playLaterPublisher = Rswift.StringResource(key: "playLater.publisher", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Release Date
       static let playLaterReleaseDate = Rswift.StringResource(key: "playLater.releaseDate", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Save profile
+      static let profileSave = Rswift.StringResource(key: "profile.save", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Something went wrong, please try again later
+      static let errorMessage = Rswift.StringResource(key: "error.message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Storage
       static let playLaterStorage = Rswift.StringResource(key: "playLater.storage", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Trending free games
@@ -297,10 +353,14 @@ struct R: Rswift.Validatable {
       static let playLaterIconFilled = Rswift.StringResource(key: "playLater.icon.filled", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: gamecontroller
       static let gamesIcon = Rswift.StringResource(key: "games.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: guest@email.com
+      static let profileEmailDefault = Rswift.StringResource(key: "profile.email.default", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: https://www.freetogame.com/api
       static let freeToGameBaseUrl = Rswift.StringResource(key: "freeToGame.baseUrl", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: minus.circle.fill
       static let playLaterRemoveIcon = Rswift.StringResource(key: "playLater.remove.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: person
+      static let profileIcon = Rswift.StringResource(key: "profile.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: rectangle.portrait.and.arrow.right.fill
       static let playLaterPlayNowIcon = Rswift.StringResource(key: "playLater.playNow.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
 
@@ -317,6 +377,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("playLater.additionalInfo.title", bundle: bundle, comment: "")
       }
 
+      /// Value: Change profile photo
+      static func profileChangePhoto(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile.changePhoto", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile.changePhoto"
+        }
+
+        return NSLocalizedString("profile.changePhoto", bundle: bundle, comment: "")
+      }
+
       /// Value: Developer
       static func playLaterDeveloper(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -328,6 +401,32 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("playLater.developer", bundle: bundle, comment: "")
+      }
+
+      /// Value: Edit profile
+      static func profileEdit(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile.edit", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile.edit"
+        }
+
+        return NSLocalizedString("profile.edit", bundle: bundle, comment: "")
+      }
+
+      /// Value: Email
+      static func profileEmailLabel(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile.email.label", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile.email.label"
+        }
+
+        return NSLocalizedString("profile.email.label", bundle: bundle, comment: "")
       }
 
       /// Value: Games
@@ -369,6 +468,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("playLater.graphics", bundle: bundle, comment: "")
       }
 
+      /// Value: Guest
+      static func profileUsernameDefault(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile.username.default", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile.username.default"
+        }
+
+        return NSLocalizedString("profile.username.default", bundle: bundle, comment: "")
+      }
+
       /// Value: Memory
       static func playLaterMemory(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -395,6 +507,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("playLater.minSysReq.title", bundle: bundle, comment: "")
       }
 
+      /// Value: Name
+      static func profileNameLabel(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile.name.label", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile.name.label"
+        }
+
+        return NSLocalizedString("profile.name.label", bundle: bundle, comment: "")
+      }
+
       /// Value: OS
       static func playLaterOs(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -406,6 +531,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("playLater.os", bundle: bundle, comment: "")
+      }
+
+      /// Value: Oopss!
+      static func errorTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error.title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error.title"
+        }
+
+        return NSLocalizedString("error.title", bundle: bundle, comment: "")
       }
 
       /// Value: PLAY NOW
@@ -460,6 +598,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("playLater.processor", bundle: bundle, comment: "")
       }
 
+      /// Value: Profile
+      static func profile(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile"
+        }
+
+        return NSLocalizedString("profile", bundle: bundle, comment: "")
+      }
+
       /// Value: Publisher
       static func playLaterPublisher(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -484,6 +635,32 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("playLater.releaseDate", bundle: bundle, comment: "")
+      }
+
+      /// Value: Save profile
+      static func profileSave(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile.save", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile.save"
+        }
+
+        return NSLocalizedString("profile.save", bundle: bundle, comment: "")
+      }
+
+      /// Value: Something went wrong, please try again later
+      static func errorMessage(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error.message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "error.message"
+        }
+
+        return NSLocalizedString("error.message", bundle: bundle, comment: "")
       }
 
       /// Value: Storage
@@ -551,6 +728,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("games.icon", bundle: bundle, comment: "")
       }
 
+      /// Value: guest@email.com
+      static func profileEmailDefault(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile.email.default", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile.email.default"
+        }
+
+        return NSLocalizedString("profile.email.default", bundle: bundle, comment: "")
+      }
+
       /// Value: https://www.freetogame.com/api
       static func freeToGameBaseUrl(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -575,6 +765,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("playLater.remove.icon", bundle: bundle, comment: "")
+      }
+
+      /// Value: person
+      static func profileIcon(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("profile.icon", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "profile.icon"
+        }
+
+        return NSLocalizedString("profile.icon", bundle: bundle, comment: "")
       }
 
       /// Value: rectangle.portrait.and.arrow.right.fill

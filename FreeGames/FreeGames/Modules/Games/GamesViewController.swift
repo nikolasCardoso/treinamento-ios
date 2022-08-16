@@ -1,7 +1,9 @@
 import UIKit
 import SnapKit
 
-internal class GamesViewController: UIViewController {
+internal class GamesViewController: UIViewController, LoadingIIndicatorViewType {
+    
+    var loadingIndicatorViewController: LoadingIndicatorViewController?
 
     private let presenter: GamesPresenterProtocol
     
@@ -31,11 +33,11 @@ internal class GamesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter.viewDidLoad()
+        
         configViews()
         buildViews()
         buildConstraints()
-        
-        presenter.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {

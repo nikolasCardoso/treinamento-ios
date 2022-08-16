@@ -7,7 +7,7 @@ internal class PlayLaterViewCell: UITableViewCell {
     
     weak var delegate: PlayLaterViewCellDelegate?
     
-    private var game: GameDetails?
+    private var game: GamePlayLater?
     
     private lazy var gameImageView: UIImageView = {
         let imageView = UIImageView()
@@ -47,6 +47,11 @@ internal class PlayLaterViewCell: UITableViewCell {
         let informationLabel = InformationLabel()
         return informationLabel
     }()
+    
+    private lazy var labelsView: UIView = {
+        let view = UIView()
+        return view
+    }()
 
     @available(*, unavailable)
     internal required init?(coder: NSCoder) {
@@ -61,7 +66,7 @@ internal class PlayLaterViewCell: UITableViewCell {
         buildConstraints()
     }
     
-    func setup(with game: GameDetails) {
+    func setup(with game: GamePlayLater) {
         self.game = game
         gameImageView.loadImage(from: game.image)
         titleLabel.text = game.title
@@ -70,12 +75,11 @@ internal class PlayLaterViewCell: UITableViewCell {
     }
     
     @objc private func removeGame() {
-        // TODO: remove from list
         if let gameNotNull = game {
             delegate?.didRemoveButtonTouched(with: gameNotNull)
         }
     }
-    
+
 }
 
 // MARK: - Codable View
@@ -92,7 +96,9 @@ extension PlayLaterViewCell {
         
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(descriptionLabel)
-        stackView.addArrangedSubview(informationLabel)
+        stackView.addArrangedSubview(labelsView)
+        
+        labelsView.addSubview(informationLabel)
     }
 
     internal func buildConstraints() {
@@ -114,12 +120,17 @@ extension PlayLaterViewCell {
             make.size.equalTo(27)
             make.centerY.equalToSuperview()
         }
+        
+        informationLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(7)
+            make.leading.bottom.equalToSuperview()
+        }
     }
 
 }
 
 protocol PlayLaterViewCellDelegate: AnyObject {
     
-    func didRemoveButtonTouched(with game: GameDetails)
+    func didRemoveButtonTouched(with game: GamePlayLater)
     
 }

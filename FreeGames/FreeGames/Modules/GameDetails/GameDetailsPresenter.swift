@@ -27,13 +27,14 @@ extension GameDetailsPresenter: GameDetailsPresenterProtocol {
     }
     
     func addGameToPlayLater() {
-        if let gameNotNull = game {
+        if let gameNotNull = game?.toGamePlayLater() {
             let isInPlayLater = PlayLaterStorage.shared.setPlayLater(game: gameNotNull)
             view?.changePlayLaterButton(isInPlayLater: isInPlayLater)
         }
     }
     
     func viewDidLoad() {
+        view?.showLoadingIndicator()
         repository.getGameDetails(with: gameId)
     }
 
@@ -48,10 +49,14 @@ extension GameDetailsPresenter: GameDetailsRepositoryOutputProtocol {
         DispatchQueue.main.async {
             self.view?.setup(with: game)
         }
+        view?.hideLoadingIndicator()
     }
     
     func getGameDetailsFailure(with error: APIError) {
-        print(error)
+        DispatchQueue.main.async {
+            self.view?.showAlert(title: Strings.errorTitle(), message: Strings.errorMessage())
+            self.view?.hideLoadingIndicator()
+        }
     }
     
 }

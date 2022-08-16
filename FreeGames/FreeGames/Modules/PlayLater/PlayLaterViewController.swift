@@ -29,16 +29,14 @@ internal class PlayLaterViewController: UIViewController {
         
         navigationController?.setNavigationBarHidden(true, animated: true)
         presenter.viewWillAppear()
+        searchBar.text = .none
     }
     
     @available(*, unavailable)
     internal required init?(coder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
     }
-
-    private func teste() {
-        
-    }
+    
 }
 
 extension PlayLaterViewController {
@@ -47,6 +45,7 @@ extension PlayLaterViewController {
         view.backgroundColor = Colors.background()
         tableView.backgroundColor = Colors.background()
         
+        searchBar.delegate = presenter
         tableView.delegate = presenter
         tableView.dataSource = presenter
         tableView.register(PlayLaterViewCell.self, forCellReuseIdentifier: PlayLaterViewCell.reuseIdentifier.identifier)

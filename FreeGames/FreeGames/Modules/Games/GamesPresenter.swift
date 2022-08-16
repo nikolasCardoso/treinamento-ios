@@ -14,12 +14,14 @@ internal class GamesPresenter: NSObject {
         self.repository = repository
         self.coordinator = coordinator
     }
+    
 }
 
 // MARK: - Presenter Protocol
 extension GamesPresenter: GamesPresenterProtocol {
     
     func viewDidLoad() {
+        view?.showLoadingIndicator()
         repository.getGames()
     }
 
@@ -30,11 +32,13 @@ extension GamesPresenter: GamesRepositoryOutputProtocol {
     func getGamesSuccess(with games: [Game]) {
         self.games = games
         view?.reload()
+        view?.hideLoadingIndicator()
     }
     
     func getGamesFailure(with error: APIError) {
         DispatchQueue.main.async {
-            print("n foi :(")
+            self.view?.showAlert(title: Strings.errorTitle(), message: Strings.errorMessage())
+            self.view?.hideLoadingIndicator()
         }
     }
     
@@ -73,4 +77,5 @@ extension GamesPresenter: UICollectionViewDelegateFlowLayout {
         
         coordinator.navigateToGameDetails(with: game.id)
     }
+    
 }
