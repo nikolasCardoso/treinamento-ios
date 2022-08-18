@@ -263,6 +263,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.image` struct is generated, and contains static references to 1 images.
+  struct image {
+    /// Image `AppIcon`.
+    static let appIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "AppIcon")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "AppIcon", bundle: ..., traitCollection: ...)`
+    static func appIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.appIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
   /// This `R.info` struct is generated, and contains static references to 1 properties.
   struct info {
     struct uiApplicationSceneManifest {
@@ -295,7 +310,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 33 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 41 localization keys.
     struct localizable {
       /// Value: Additional Information
       static let playLaterAdditionalInfoTitle = Rswift.StringResource(key: "playLater.additionalInfo.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -325,6 +340,8 @@ struct R: Rswift.Validatable {
       static let playLaterOs = Rswift.StringResource(key: "playLater.os", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Oopss!
       static let errorTitle = Rswift.StringResource(key: "error.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: PC (Windows)
+      static let platformPcNameVariant = Rswift.StringResource(key: "platform.pc.name.variant", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: PLAY NOW
       static let playLaterPlayNowButton = Rswift.StringResource(key: "playLater.playNow.button", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Platform
@@ -347,20 +364,34 @@ struct R: Rswift.Validatable {
       static let playLaterStorage = Rswift.StringResource(key: "playLater.storage", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Trending free games
       static let gamesTitle = Rswift.StringResource(key: "games.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Web Browser
+      static let platformWebBrowserName = Rswift.StringResource(key: "platform.webBrowser.name", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Windows
+      static let platformPcName = Rswift.StringResource(key: "platform.pc.name", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Windows and Web Browser
+      static let platformBothName = Rswift.StringResource(key: "platform.both.name", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: clock
       static let playLaterIcon = Rswift.StringResource(key: "playLater.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: clock.fill
       static let playLaterIconFilled = Rswift.StringResource(key: "playLater.icon.filled", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: desktopcomputer
+      static let platformPcIcon = Rswift.StringResource(key: "platform.pc.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: ellipsis.rectangle
+      static let platformBothIcon = Rswift.StringResource(key: "platform.both.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: gamecontroller
       static let gamesIcon = Rswift.StringResource(key: "games.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: guest@email.com
       static let profileEmailDefault = Rswift.StringResource(key: "profile.email.default", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: https://www.freetogame.com/api
       static let freeToGameBaseUrl = Rswift.StringResource(key: "freeToGame.baseUrl", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: menubar.dock.rectangle
+      static let platformWebBrowserIcon = Rswift.StringResource(key: "platform.webBrowser.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: minus.circle.fill
       static let playLaterRemoveIcon = Rswift.StringResource(key: "playLater.remove.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: person
       static let profileIcon = Rswift.StringResource(key: "profile.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: photo
+      static let imagePlaceholderIcon = Rswift.StringResource(key: "image.placeholder.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: rectangle.portrait.and.arrow.right.fill
       static let playLaterPlayNowIcon = Rswift.StringResource(key: "playLater.playNow.icon", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
 
@@ -546,6 +577,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("error.title", bundle: bundle, comment: "")
       }
 
+      /// Value: PC (Windows)
+      static func platformPcNameVariant(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("platform.pc.name.variant", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "platform.pc.name.variant"
+        }
+
+        return NSLocalizedString("platform.pc.name.variant", bundle: bundle, comment: "")
+      }
+
       /// Value: PLAY NOW
       static func playLaterPlayNowButton(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -689,6 +733,45 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("games.title", bundle: bundle, comment: "")
       }
 
+      /// Value: Web Browser
+      static func platformWebBrowserName(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("platform.webBrowser.name", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "platform.webBrowser.name"
+        }
+
+        return NSLocalizedString("platform.webBrowser.name", bundle: bundle, comment: "")
+      }
+
+      /// Value: Windows
+      static func platformPcName(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("platform.pc.name", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "platform.pc.name"
+        }
+
+        return NSLocalizedString("platform.pc.name", bundle: bundle, comment: "")
+      }
+
+      /// Value: Windows and Web Browser
+      static func platformBothName(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("platform.both.name", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "platform.both.name"
+        }
+
+        return NSLocalizedString("platform.both.name", bundle: bundle, comment: "")
+      }
+
       /// Value: clock
       static func playLaterIcon(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -713,6 +796,32 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("playLater.icon.filled", bundle: bundle, comment: "")
+      }
+
+      /// Value: desktopcomputer
+      static func platformPcIcon(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("platform.pc.icon", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "platform.pc.icon"
+        }
+
+        return NSLocalizedString("platform.pc.icon", bundle: bundle, comment: "")
+      }
+
+      /// Value: ellipsis.rectangle
+      static func platformBothIcon(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("platform.both.icon", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "platform.both.icon"
+        }
+
+        return NSLocalizedString("platform.both.icon", bundle: bundle, comment: "")
       }
 
       /// Value: gamecontroller
@@ -754,6 +863,19 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("freeToGame.baseUrl", bundle: bundle, comment: "")
       }
 
+      /// Value: menubar.dock.rectangle
+      static func platformWebBrowserIcon(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("platform.webBrowser.icon", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "platform.webBrowser.icon"
+        }
+
+        return NSLocalizedString("platform.webBrowser.icon", bundle: bundle, comment: "")
+      }
+
       /// Value: minus.circle.fill
       static func playLaterRemoveIcon(preferredLanguages: [String]? = nil) -> String {
         guard let preferredLanguages = preferredLanguages else {
@@ -778,6 +900,19 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("profile.icon", bundle: bundle, comment: "")
+      }
+
+      /// Value: photo
+      static func imagePlaceholderIcon(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("image.placeholder.icon", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "image.placeholder.icon"
+        }
+
+        return NSLocalizedString("image.placeholder.icon", bundle: bundle, comment: "")
       }
 
       /// Value: rectangle.portrait.and.arrow.right.fill
@@ -836,6 +971,7 @@ struct _R: Rswift.Validatable {
 
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "AccentColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'AccentColor' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         }
       }
 

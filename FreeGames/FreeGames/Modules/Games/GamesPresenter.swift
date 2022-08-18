@@ -7,7 +7,7 @@ internal class GamesPresenter: NSObject {
     internal var repository: GamesRepositoryInputProtocol
     internal var coordinator: GamesCoordinatorProtocol
     
-    private var games: [Game] = []
+    internal var games: [Game] = []
     
     internal init(repository: GamesRepositoryInputProtocol,
                   coordinator: GamesCoordinatorProtocol) {

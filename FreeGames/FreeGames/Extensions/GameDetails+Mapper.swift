@@ -23,8 +23,8 @@ extension Platform {
             return .pc
         case .webBrowser:
             return .webBrowser
-        case .unknown:
-            return .unknown
+        case .both:
+            return .both
         }
     }
     

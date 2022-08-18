@@ -7,11 +7,17 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Equatable {
     
     var name: String?
     var email: String?
     var photoPath: String?
+    
+    static func ==(lhs: Self, rhs: Self) -> Bool {
+        lhs.name == rhs.name &&
+        lhs.email == rhs.email &&
+        lhs.photoPath == rhs.photoPath
+    }
     
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GameDetails: Codable {
+struct GameDetails: Codable, Equatable {
     
     let id: Int
     let title: String
@@ -39,9 +39,23 @@ struct GameDetails: Codable {
         case minSysReq = "minimum_system_requirements"
     }
     
+    static func ==(lhs: Self, rhs: Self) -> Bool {
+        lhs.id == rhs.id &&
+        lhs.title == rhs.title &&
+        lhs.description == rhs.description &&
+        lhs.image == rhs.image &&
+        lhs.url == rhs.url &&
+        lhs.genre == rhs.genre &&
+        lhs.platform == rhs.platform &&
+        lhs.developer == rhs.developer &&
+        lhs.publisher == rhs.publisher &&
+        lhs.releaseDate == rhs.releaseDate &&
+        lhs.minSysReq == rhs.minSysReq
+    }
+    
 }
 
-struct MinimumSystemRequirements: Codable {
+struct MinimumSystemRequirements: Codable, Equatable {
     
     let os: String?
     let processor: String?
@@ -55,6 +69,14 @@ struct MinimumSystemRequirements: Codable {
         case storage
         case memory
         case graphics
+    }
+    
+    static func ==(lhs: Self, rhs: Self) -> Bool {
+        lhs.os == rhs.os &&
+        lhs.processor == rhs.processor &&
+        lhs.storage == rhs.storage &&
+        lhs.memory == rhs.memory &&
+        lhs.graphics == rhs.graphics
     }
     
 }

@@ -11,6 +11,14 @@
 "games" = "Games";
 "games.title" = "Trending free games";
 
+"platform.pc.icon" = "desktopcomputer";
+"platform.webBrowser.icon" = "menubar.dock.rectangle";
+"platform.both.icon" = "ellipsis.rectangle";
+"platform.pc.name" = "Windows";
+"platform.pc.name.variant" = "PC (Windows)";
+"platform.webBrowser.name" = "Web Browser";
+"platform.both.name" = "Windows and Web Browser";
+
 "playLater" = "Play Later";
 "playLater.playNow.button" = "PLAY NOW";
 "playLater.additionalInfo.title" = "Additional Information";
@@ -36,6 +44,7 @@
 "profile.changePhoto" = "Change profile photo";
 
 "games.icon"= "gamecontroller";
+"image.placeholder.icon"= "photo";
 "playLater.playNow.icon" = "rectangle.portrait.and.arrow.right.fill";
 "playLater.icon"= "clock";
 "playLater.icon.filled"= "clock.fill";

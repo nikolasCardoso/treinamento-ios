@@ -172,7 +172,7 @@ extension EditProfileViewController: EditProfileViewProtocol {
         nameTextField.text = user.name
         emailTextField.text = user.email
         guard let photoPath = user.photoPath else { return }
-        photoImageView.loadImage(from: photoPath)
+        photoImageView.loadImageFromDocuments(with: photoPath)
     }
 
 }
@@ -199,11 +199,15 @@ extension EditProfileViewController: UITextFieldDelegate {
 extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let imagePath = info[.imageURL] else { return }
-        let imageUrl = String(describing: imagePath)
         
-        userInformations[.photoPath] = imageUrl
-        photoImageView.loadImage(from: imageUrl)
+        guard let image = info[.originalImage] as? UIImage else { return }
+        guard let imageURL = info[.imageURL] as? URL else { return }
+        let fileName = imageURL.lastPathComponent
+        
+        image.saveToDocuments(with: fileName)
+        
+        userInformations[.photoPath] = fileName
+        photoImageView.loadImageFromDocuments(with: fileName)
         dismiss(animated: true)
     }
     

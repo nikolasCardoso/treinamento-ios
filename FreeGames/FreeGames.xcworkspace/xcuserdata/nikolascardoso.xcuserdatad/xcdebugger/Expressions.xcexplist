@@ -3,10 +3,13 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "PlayLaterStorage.updateDatabase():PlayLaterStorage.swift">
+         contextName = "Platform.init(from:):Platform.swift">
          <PersistentStrings>
             <PersistentString
-               value = "userDefaults.data(forKey: databaseKey)">
+               value = "decoder.singleValueContainer()">
+            </PersistentString>
+            <PersistentString
+               value = "decoder.singleValueContainer().decode(String.self)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -23,6 +26,14 @@
          <PersistentStrings>
             <PersistentString
                value = "games">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PlayLaterStorage.updateDatabase():PlayLaterStorage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userDefaults.data(forKey: databaseKey)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

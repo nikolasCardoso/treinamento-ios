@@ -50,7 +50,7 @@ class PlayLaterStorage {
     
 }
 
-private extension PlayLaterStorage {
+extension PlayLaterStorage {
     
     func updateDatabase() {
         guard let jsonData = try? JSONEncoder().encode(games) else { return }

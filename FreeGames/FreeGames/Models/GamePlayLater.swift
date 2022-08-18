@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GamePlayLater: Codable {
+struct GamePlayLater: Codable, Equatable {
     
     let id: Int
     let title: String
@@ -22,16 +22,16 @@ enum PlatformPlayLater: Codable {
     
     case pc
     case webBrowser
-    case unknown
+    case both
     
     var iconName: String {
         switch self {
         case .pc:
-            return "desktopcomputer"
+            return Strings.platformPcIcon()
         case .webBrowser:
-            return "menubar.dock.rectangle"
+            return Strings.platformWebBrowserIcon()
         default:
-            return ""
+            return Strings.platformBothIcon()
         }
     }
     

@@ -15,10 +15,20 @@ extension UIImageView {
         guard let url = URL(string: url) else { return }
         
         Nuke.loadImage(with: url,
-                       options: ImageLoadingOptions(placeholder: UIImage(systemName: "photo")),
+                       options: ImageLoadingOptions(placeholder: UIImage(systemName: Strings.imagePlaceholderIcon())),
                        into: self)
     }
     
+    func loadImageFromDocuments(with fileName: String) {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        
+        let imagePath = path?.appendingPathComponent(fileName)
+        
+        Nuke.loadImage(with: imagePath,
+                       options: ImageLoadingOptions(placeholder: UIImage(systemName: Strings.imagePlaceholderIcon())),
+                       into: self)
+    }
+
     func addBlackGradientLayer(frame: CGRect){
          let gradient = CAGradientLayer()
         

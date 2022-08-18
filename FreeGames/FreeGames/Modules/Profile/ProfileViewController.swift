@@ -128,7 +128,7 @@ extension ProfileViewController: ProfileViewProtocol {
             }
             
             guard let photoPath = userNotNull.photoPath else { return }
-            photoImageView.loadImage(from: photoPath)
+            photoImageView.loadImageFromDocuments(with: photoPath)
         }
     }
 

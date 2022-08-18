@@ -11,19 +11,19 @@ enum Platform: Codable {
     
     case pc
     case webBrowser
-    case unknown
+    case both
     
     init(from decoder: Decoder) throws {
         let rawValue = try decoder.singleValueContainer().decode(String.self)
         switch rawValue {
-        case "PC (Windows)", "Windows":
+        case Strings.platformPcName(), Strings.platformPcNameVariant():
             self = .pc
             break
-        case "Web Browser":
+        case Strings.platformWebBrowserName():
             self = .webBrowser
             break
         default:
-            self = .unknown
+            self = .both
             break
         }
     }
@@ -31,22 +31,22 @@ enum Platform: Codable {
     var iconName: String {
         switch self {
         case .pc:
-            return "desktopcomputer"
+            return Strings.platformPcIcon()
         case .webBrowser:
-            return "menubar.dock.rectangle"
+            return Strings.platformWebBrowserIcon()
         default:
-            return ""
+            return Strings.platformBothIcon()
         }
     }
     
     var name: String {
         switch self {
         case .pc:
-            return "Windows"
+            return Strings.platformPcName()
         case .webBrowser:
-            return "Web Browser"
+            return Strings.platformWebBrowserName()
         default:
-            return ""
+            return Strings.platformBothName()
         }
     }
     
